@@ -23,7 +23,8 @@ export default function App() {
     });
 
     const isMobile = window.innerWidth < 768;
-    const splitX = isMobile ? "15%" : "100%";
+    const splitX = isMobile ? "30%" : "100%";
+    const featureScale = isMobile ? 0.5 : 0.8;
 
     // Initial state
     tl.fromTo(".hero-text",
@@ -40,6 +41,7 @@ export default function App() {
       .to(".airpod-left", {
         rotationY: 360,
         x: `-${splitX}`,
+        z: 10, // Add slight depth to prevent clipping
         duration: 2.5,
         ease: "power2.inOut"
       })
@@ -47,18 +49,20 @@ export default function App() {
         opacity: 0,
         rotationY: 180,
         scale: 0.8,
-        x: "0%"
+        x: "0%",
+        z: 0
       }, {
         opacity: 1,
         rotationY: 0,
         scale: 1,
         x: splitX,
+        z: 20, // Bring right one slightly forward
         duration: 2.5,
         ease: "power2.inOut"
       }, "<")
       .to(".airpods-main", {
         x: "25%",
-        scale: 0.5, // Return to normal size (250px equivalent) for features
+        scale: featureScale, // Larger on desktop for features
         rotate: 15,
         duration: 2
       })
@@ -78,8 +82,9 @@ export default function App() {
       }, "<")
       .to({}, { duration: 2 }) // Hold feature 1
       .to(".airpods-main", {
-        x: window.innerWidth < 768 ? "0%" : "-35%",
-        y: window.innerWidth < 768 ? "-15vh" : "0%",
+        x: isMobile ? "0%" : "-30%", // Adjusted x for larger scale
+        y: isMobile ? "-20vh" : "0%", // Slightly down for better centering on mobile
+        scale: featureScale,
         rotate: -15,
         duration: 3 // Slower transition to feature 2
       })
