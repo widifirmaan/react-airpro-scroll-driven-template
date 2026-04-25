@@ -1,91 +1,86 @@
-# 🎧 AirPods Pro Experience
+# 🎧 Airpro - React Scroll-driven Template
 
-A high-end, scroll-animated landing page for AirPods Pro, featuring smooth GSAP transitions and Apple-inspired design. Rebuilt from the sound up to provide an immersive web experience.
-
----
-
-## 📸 Application Showcase
-
-### Core Interfaces + Visual Journey
-Experience the magic of AirPods Pro through a seamless visual narrative that unfolds as you scroll.
-
-| Hero Section | Animated Product Reveal | Feature Deep-Dive |
-| :---: | :---: | :---: |
-| ![Hero](https://raw.githubusercontent.com/widifirmaan/airpro-smooth-react-template/refs/heads/main/screenshot/Screenshot%202026-04-06%20093116.png) | ![Reveal](https://raw.githubusercontent.com/widifirmaan/airpro-smooth-react-template/refs/heads/main/screenshot/Screenshot%202026-04-06%20092847.png) | ![Features](https://raw.githubusercontent.com/widifirmaan/airpro-smooth-react-template/refs/heads/main/screenshot/Screenshot%202026-04-06%20093101.png) |
+A high-performance, scroll-driven interactive landing page for Airpro. This project leverages advanced animation techniques and modern CSS architectures to deliver a premium, Apple-inspired digital experience.
 
 ---
 
-## 🚀 Features Overview
+## 🏗️ Technical Architecture
 
-### 🎮 Immersive Scroll Animations
-Powered by **GSAP ScrollTrigger**, the entire landing page reacts to your scroll position, creating a cinematic storytelling experience.
+### Animation Engine: GSAP ScrollTrigger
+The core experience is built on a master **GSAP (GreenSock Animation Platform)** timeline integrated with `ScrollTrigger`.
+- **Interpolation**: Uses `scrub: 1` for a smooth, physics-based connection between scroll position and animation state.
+- **Scene Management**: A sticky container architecture allows the AirPods to transition through multiple states (Product Reveal, Feature Callouts, and Deep Zoom) while remaining pinned in the viewport.
+- **Perspective Handling**: Implements 3D transforms with `[perspective:1000px]` and `preserve-3d` to maintain visual fidelity during AirPods rotation.
 
-### 🧩 Sticky Covering Effect
-The final "Rebuilt from the sound up" section sticks to the viewport while the subsequent content sections slide over it, creating a modern, layered depth effect.
+### Design System: Liquid Glass 2.0
+The project utilizes a custom "Liquid Glass" design language implemented via **Tailwind CSS v4**.
+- **Glassmorphism**: Leverages `backdrop-blur-3xl` and semi-transparent alpha-channel colors (`white/5`, `black/60`) for organic depth.
+- **Floating UI**: The navigation bar uses a decoupled, floating capsule design with dynamic hover states and centered transition borders.
+- **Gooey Effects**: Utilizes SVG filters (PostCSS compatible) to create "liquid" loading animations for a high-end preloader experience.
 
-### 📱 Modern Experience
-- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewports.
-- **Staggered Pop-ups**: Content sections feature staggered entrance animations for a premium feel.
-- **High Performance**: Optimized GSAP timelines for smooth 60fps animations.
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend & Framework
-- **React 18**: Component-based UI architecture.
-- **Vite**: Ultra-fast development server and build tool.
-- **GSAP (GreenSock)**: The industry standard for high-performance web animations.
-- **Tailwind CSS**: Utility-first styling for rapid, responsive design.
-- **Lucide React**: Clean and consistent iconography.
+### State & Loading Strategy
+- **Global Preloader**: A centralized loading state tracks `document.readyState` and `window.onload` to ensure all high-resolution assets (4K textures, video embeds, and H2 chip imagery) are cached before revealing the UI.
+- **React Logic**: Managed via `useEffect` and `useState` for clean entry/exit transitions with CSS-driven hardware acceleration.
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Technology Stack
+
+### Core
+- **React 19**: Leveraging the latest concurrent rendering features.
+- **Vite 6**: Utilizing the ESM-based development server for instant HMR.
+- **TypeScript**: Full type safety for animation constants and component props.
+
+### Styling & Motion
+- **Tailwind CSS v4**: Advanced utility-first styling with native support for CSS variables and container queries.
+- **GSAP & ScrollTrigger**: industry-standard performance for scroll-bound animations.
+- **Lucide React**: Vector-based iconography for crisp rendering on retina displays.
+
+---
+
+## 📂 Project Anatomy
 
 ```bash
 .
 ├── src/
-│   ├── App.tsx          # Main application logic and GSAP timelines
-│   ├── index.css        # Global styles and Tailwind imports
-│   ├── main.tsx         # React entry point
-│   └── lib/             # Utility functions
-├── public/              # Static assets (videos, images)
-├── package.json         # Project dependencies
-└── vite.config.ts       # Vite configuration
+│   ├── App.tsx          # Master Component: Contains GSAP Timeline & ScrollTrigger Logic
+│   ├── index.css        # Global Styles: Tailwind v4 Directives & Custom Glass Classes
+│   ├── main.tsx         # Entry Point: StrictMode & Global CSS Injection
+│   └── components/      # (Optional) Reusable UI components
+├── public/              # High-bitrate video assets and static media
+├── index.html           # Font Optimization & Meta Configuration
+└── package.json         # Dependency manifest (Vite, GSAP, Tailwind)
 ```
 
 ---
 
-## 📦 Getting Started
+## 🚀 Performance Optimizations
 
-### Prerequisites
-- **Node.js**: Version 18 or higher.
-- **npm**: Standard package manager.
-
-### Installation & Development
-1. **Clone the repository** (if applicable).
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+1. **Hardware Acceleration**: Used `will-change-transform` on the AirPods container to offload rendering to the GPU.
+2. **PostCSS Ordering**: Font imports are optimized via `<link>` tags in the HTML head to avoid PostCSS `@import` blocking and layout shifts.
+3. **Asset Lazy Loading**: Iframes for video embeds are deferred until the main thread is idle, managed by the global preloader.
+4. **Debounced Resizing**: GSAP `ScrollTrigger.refresh()` is utilized to recalculate animation breakpoints on window resize events.
 
 ---
 
-## 👥 Authors
+## 💻 Development Workflow
 
-- **AI Studio Builder** - *Initial Implementation & Design*
-- **User** - *Product Vision & Iteration*
+### Installation
+```bash
+npm install
+```
+
+### Local Development
+```bash
+npm run dev
+```
+
+### Production Build
+```bash
+npm run build
+```
 
 ---
 
-> [!TIP]
-> This application is best experienced on a high-refresh-rate screen to fully appreciate the smooth GSAP transitions.
+> [!IMPORTANT]
+> This project requires a browser that supports CSS Backdrop Filter and hardware-accelerated 3D transforms for the intended visual experience.

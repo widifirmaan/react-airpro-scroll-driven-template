@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -11,6 +11,22 @@ export default function App() {
   const trackRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const airpodsRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showPreloader, setShowPreloader] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoaded(true);
+      setTimeout(() => setShowPreloader(false), 1000);
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -38,7 +54,15 @@ export default function App() {
         { y: "0vh", scale: 1, rotate: 0, duration: 2 },
         "-=0.5"
       )
+      .fromTo(".middle-heading",
+        { opacity: 0, scale: 0.8, y: 50 },
+        { opacity: 1, scale: 1, y: 0, duration: 1 },
+        "-=1"
+      )
       .to({}, { duration: 1.5 }) // Short hold with 2 images split
+      .to(".middle-heading",
+        { opacity: 0, scale: 1.2, y: -50, duration: 0.8 }
+      )
       .to(".airpods-main", {
         x: "25%",
         scale: featureScale, // Larger on desktop for features
@@ -165,16 +189,24 @@ export default function App() {
 
   return (
     <div ref={rootRef} className="bg-black min-h-screen font-sans text-white selection:bg-blue-500/30">
+      {/* Simple Global Preloader */}
+      {showPreloader && (
+        <div className={`preloader ${isLoaded ? 'fade-out' : ''}`}>
+          <div className="loader-spinner" />
+          <h2 className="text-2xl font-bold tracking-tighter">AirPods Pro</h2>
+        </div>
+      )}
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md bg-black/20 border-b border-white/5">
+      <nav className="liquid-glass-nav">
         <div className="text-xl font-bold tracking-tighter">AirPods Pro</div>
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-          <a href="#" className="hover:text-white transition-colors">Overview</a>
-          <a href="#" className="hover:text-white transition-colors">Tech Specs</a>
-          <a href="#" className="hover:text-white transition-colors">Compare</a>
+        <div className="hidden md:flex items-center gap-8">
+          <a href="#" className="nav-link">Overview</a>
+          <a href="#" className="nav-link">Tech Specs</a>
+          <a href="#" className="nav-link">Compare</a>
         </div>
         <div className="flex items-center gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-1.5 rounded-full text-sm font-semibold transition-all cursor-pointer shadow-lg shadow-blue-500/20 active:scale-95">
             Buy
           </button>
           <Menu className="w-6 h-6 md:hidden cursor-pointer" />
@@ -213,6 +245,13 @@ export default function App() {
             <p className="text-base md:text-lg lg:text-2xl text-gray-400 max-w-2xl px-6">
               AirPods Pro have been re-engineered for even richer audio experiences.
             </p>
+          </div>
+
+          {/* Center Heading Section */}
+          <div className="middle-heading opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center z-15 pointer-events-none">
+            <h2 className="text-6xl md:text-8xl lg:text-[12rem] font-black tracking-tighter leading-[0.8] uppercase italic text-white select-none">
+              Pure <br /> Sound.
+            </h2>
           </div>
 
           {/* Animated AirPods */}
@@ -264,29 +303,32 @@ export default function App() {
       </div>
 
       {/* Additional Content Sections */}
-      <section className="h2-section py-32 px-6 bg-white text-black relative z-50 mt-[-100vh]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <section className="h2-section py-32 px-6 bg-black text-white relative z-50 mt-[-100vh]">
+        {/* Background Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
           <div className="h2-content">
-            <span className="text-blue-600 font-bold uppercase tracking-widest text-sm">H2 Chip</span>
+            <span className="text-blue-500 font-bold uppercase tracking-widest text-sm">H2 Chip</span>
             <h2 className="text-5xl md:text-6xl font-bold mt-4 mb-8 tracking-tight leading-[0.9]">
-              A smarter way to hear.
+              A smarter way <br /> to hear.
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
               The Apple-designed H2 chip is the force behind AirPods Pro and its advanced audio performance. It works in concert with a custom-built driver and amplifier to deliver crisp, clear high notes and deep, rich bass in stunning definition.
             </p>
           </div>
-          <div className="h2-image relative group overflow-hidden rounded-3xl">
+          <div className="h2-image relative group overflow-hidden rounded-3xl glass-card p-2">
             <img
               src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&q=80&w=1000"
               alt="H2 Chip"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              className="w-full h-full object-cover rounded-2xl transition-transform duration-1000 group-hover:scale-110"
               referrerPolicy="no-referrer"
             />
           </div>
         </div>
       </section>
 
-      <section className="stats-section py-32 px-6 bg-gray-50 text-black relative z-50">
+      <section className="stats-section py-32 px-6 bg-black text-white relative z-50">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="stats-title text-4xl md:text-5xl lg:text-7xl font-bold mb-16 tracking-tight leading-[0.9]">
             Everything you need <br /> to hear is here.
@@ -298,11 +340,30 @@ export default function App() {
               { label: "Water Resistant", value: "IPX4" },
               { label: "Bluetooth", value: "5.3" }
             ].map((stat, i) => (
-              <div key={i} className="stat-card p-8 bg-white rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-500">
-                <div className="text-4xl font-bold mb-2 tracking-tighter">{stat.value}</div>
+              <div key={i} className="stat-card glass-card p-8 group hover:border-white/20 transition-all duration-500 hover:-translate-y-2">
+                <div className="text-4xl font-bold mb-2 tracking-tighter group-hover:text-blue-400 transition-colors">{stat.value}</div>
                 <div className="text-sm text-gray-500 font-semibold uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Embed Section */}
+      <section className="py-32 px-6 bg-black relative z-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Experience the Sound.</h2>
+             <p className="text-gray-400 text-lg">Immerse yourself in the world of AirPods Pro.</p>
+          </div>
+
+          <div className="relative aspect-video glass-card group">
+            <iframe
+              className="w-full h-full rounded-3xl"
+              src="https://www.youtube.com/embed/fW6J7BId1Yc?autoplay=1&mute=1&controls=0&loop=1&playlist=fW6J7BId1Yc&modestbranding=1&showinfo=0&rel=0"
+              title="AirPods Pro Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            />
           </div>
         </div>
       </section>
