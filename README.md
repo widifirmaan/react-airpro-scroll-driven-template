@@ -1,86 +1,93 @@
 # 🎧 Airpro - React Scroll-driven Template
 
-A high-performance, scroll-driven interactive landing page for Airpro. This project leverages advanced animation techniques and modern CSS architectures to deliver a premium, Apple-inspired digital experience.
+**Airpro** is a high-performance, scroll-driven interactive landing page built with **React 19**, **Vite 6**, and **GSAP 3**. It leverages advanced animation techniques and modern CSS architectures to deliver a premium, Apple-inspired digital experience. Rebuilt from the sound up, it features a custom **Liquid Glass Design System** implemented via **Tailwind CSS v4**, featuring high-end glassmorphism, fluid motion, and hardware-accelerated 3D transforms.
+
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![GSAP](https://img.shields.io/badge/GSAP_3-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
 ---
 
-## 🏗️ Technical Architecture
+Explore the visual journey of **Airpro** through our interactive gallery.
 
-### Animation Engine: GSAP ScrollTrigger
-The core experience is built on a master **GSAP (GreenSock Animation Platform)** timeline integrated with `ScrollTrigger`.
-- **Interpolation**: Uses `scrub: 1` for a smooth, physics-based connection between scroll position and animation state.
-- **Scene Management**: A sticky container architecture allows the AirPods to transition through multiple states (Product Reveal, Feature Callouts, and Deep Zoom) while remaining pinned in the viewport.
-- **Perspective Handling**: Implements 3D transforms with `[perspective:1000px]` and `preserve-3d` to maintain visual fidelity during AirPods rotation.
-
-### Design System: Liquid Glass 2.0
-The project utilizes a custom "Liquid Glass" design language implemented via **Tailwind CSS v4**.
-- **Glassmorphism**: Leverages `backdrop-blur-3xl` and semi-transparent alpha-channel colors (`white/5`, `black/60`) for organic depth.
-- **Floating UI**: The navigation bar uses a decoupled, floating capsule design with dynamic hover states and centered transition borders.
-- **Gooey Effects**: Utilizes SVG filters (PostCSS compatible) to create "liquid" loading animations for a high-end preloader experience.
-
-### State & Loading Strategy
-- **Global Preloader**: A centralized loading state tracks `document.readyState` and `window.onload` to ensure all high-resolution assets (4K textures, video embeds, and H2 chip imagery) are cached before revealing the UI.
-- **React Logic**: Managed via `useEffect` and `useState` for clean entry/exit transitions with CSS-driven hardware acceleration.
+| | |
+|:---:|:---:|
+| ![Hero](screenshot/Hero%20Page.png)<br>**Hero Section** | ![Reveal](screenshot/Product%20Page.png)<br>**Animated Product Reveal** |
+| ![Features](screenshot/Product%20Info%20Page.png)<br>**Feature Deep-Dive** | ![Footer](screenshot/Footer%20Page.png)<br>**Liquid Glass Stats & Footer** |
 
 ---
 
-## 🛠️ Technology Stack
+### 🎮 Immersive Motion
+*   **GSAP ScrollTrigger**: Physics-based scroll interpolation (`scrub: 1`) for cinematic storytelling.
+*   **3D Perspective**: Implements hardware-accelerated 3D transforms (`preserve-3d`) for realistic product rotation.
+*   **Staggered Entrance**: Content sections feature orchestrated entry animations for a premium feel.
 
-### Core
-- **React 19**: Leveraging the latest concurrent rendering features.
-- **Vite 6**: Utilizing the ESM-based development server for instant HMR.
-- **TypeScript**: Full type safety for animation constants and component props.
+### 🧩 Liquid Glass Design
+*   **Glassmorphism 2.0**: High-density `backdrop-blur-3xl` with semi-transparent tinted backgrounds.
+*   **Floating Navigation**: Capsule-shaped floating navbar with dynamic hover interactions and center-out transitions.
+*   **Gooey Preloader**: Event-driven global loading system featuring liquid SVG filters and curtain reveal animations.
 
-### Styling & Motion
-- **Tailwind CSS v4**: Advanced utility-first styling with native support for CSS variables and container queries.
-- **GSAP & ScrollTrigger**: industry-standard performance for scroll-bound animations.
-- **Lucide React**: Vector-based iconography for crisp rendering on retina displays.
+### 📱 Technical Excellence
+*   **Mobile-First Core**: Fully responsive architecture that adapts complex GSAP timelines across all viewports.
+*   **Performance First**: Zero layout shifts, optimized PostCSS ordering, and `will-change-transform` GPU offloading.
+*   **React 19 Ready**: Utilizing the latest concurrent rendering and state management patterns.
 
 ---
 
-## 📂 Project Anatomy
+### 🛠️ Architecture & Logic
+*   **Framework**: React 19 (Hooks, StrictMode)
+*   **Animations**: GSAP (ScrollTrigger, useGSAP)
+*   **Styling**: Tailwind CSS v4 (Alpha), Modern CSS Variables
+*   **Iconography**: Lucide React
+*   **Tooling**: Vite 6, PostCSS, TypeScript
 
+---
+
+### 📂 Project Structure
 ```bash
-.
+/
 ├── src/
-│   ├── App.tsx          # Master Component: Contains GSAP Timeline & ScrollTrigger Logic
-│   ├── index.css        # Global Styles: Tailwind v4 Directives & Custom Glass Classes
-│   ├── main.tsx         # Entry Point: StrictMode & Global CSS Injection
-│   └── components/      # (Optional) Reusable UI components
-├── public/              # High-bitrate video assets and static media
-├── index.html           # Font Optimization & Meta Configuration
-└── package.json         # Dependency manifest (Vite, GSAP, Tailwind)
+│   ├── App.tsx          # Main logic & GSAP timelines
+│   ├── index.css        # Liquid Glass design system
+│   └── main.tsx         # App entry & global CSS
+├── public/              # High-bitrate video & 4K media
+├── index.html           # Font & Meta optimization
+├── package.json         # Dependency manifest
+└── vite.config.ts       # Vite & Tailwind configuration
 ```
 
 ---
 
-## 🚀 Performance Optimizations
+### 📦 Quick Start
 
-1. **Hardware Acceleration**: Used `will-change-transform` on the AirPods container to offload rendering to the GPU.
-2. **PostCSS Ordering**: Font imports are optimized via `<link>` tags in the HTML head to avoid PostCSS `@import` blocking and layout shifts.
-3. **Asset Lazy Loading**: Iframes for video embeds are deferred until the main thread is idle, managed by the global preloader.
-4. **Debounced Resizing**: GSAP `ScrollTrigger.refresh()` is utilized to recalculate animation breakpoints on window resize events.
-
----
-
-## 💻 Development Workflow
-
-### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/widifirmaan/airpro-smooth-react-template.git
+
+# Install dependencies
 npm install
-```
 
-### Local Development
-```bash
+# Start development server
 npm run dev
-```
 
-### Production Build
-```bash
+# Build for production
 npm run build
 ```
 
 ---
 
-> [!IMPORTANT]
-> This project requires a browser that supports CSS Backdrop Filter and hardware-accelerated 3D transforms for the intended visual experience.
+## 👥 Authors
+Developed with ❤️ by:
+*   **AI Studio Builder** - Lead Implementation
+*   **Widi Firmansyah** - Product Vision & Iteration
+
+---
+
+## 📜 License
+This project is developed for educational and showcase purposes. Any distribution or commercial use requires prior authorization.
+
+---
+
+**Developed for a better sound experience** 🚀
