@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +13,17 @@ export default function App() {
   const airpodsRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [showPreloader, setShowPreloader] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Prevent scrolling when menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.overflowX = 'hidden';
+    }
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -198,33 +209,75 @@ export default function App() {
       )}
 
       {/* Navigation */}
-      <nav className="liquid-glass-nav">
-        <div className="text-xl font-bold tracking-tighter">AirPods Pro</div>
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="nav-link">Overview</a>
-          <a href="#" className="nav-link">Tech Specs</a>
-          <a href="#" className="nav-link">Compare</a>
-        </div>
-        <div className="flex items-center gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-1.5 rounded-full text-sm font-semibold transition-all cursor-pointer shadow-lg shadow-blue-500/20 active:scale-95">
-            Buy
-          </button>
-          <Menu className="w-6 h-6 md:hidden cursor-pointer" />
+      <nav className={`liquid-glass-nav ${isMenuOpen ? 'nav-open' : ''}`}>
+        <div className="flex items-center justify-between w-full gap-2">
+          <div className="text-base md:text-xl font-bold tracking-tighter shrink-0">AirPods Pro</div>
+          
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#" className="nav-link">Overview</a>
+            <a href="#" className="nav-link">Tech Specs</a>
+            <a href="#" className="nav-link">Compare</a>
+          </div>
+
+          <div className="flex items-center gap-2 md:gap-4">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 md:px-5 py-1.5 rounded-full text-[10px] md:text-sm font-semibold transition-all cursor-pointer shadow-lg shadow-blue-500/20 active:scale-95 shrink-0">
+              Buy
+            </button>
+            <button 
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMenuOpen(!isMenuOpen);
+              }}
+              className="md:hidden relative z-[70] p-2 -mr-1 hover:bg-white/10 rounded-full transition-colors outline-none flex items-center justify-center"
+              aria-label="Toggle Menu"
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 z-[60] md:hidden transition-all duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      >
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-xl" onClick={() => setIsMenuOpen(false)} />
+        <div className={`absolute top-24 left-4 right-4 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] p-8 transition-all duration-500 transform ${isMenuOpen ? 'translate-y-0 scale-100 opacity-100' : '-translate-y-10 scale-95 opacity-0'}`}>
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
+              {['Overview', 'Tech Specs', 'Compare'].map((item, i) => (
+                <a 
+                  key={item}
+                  href="#" 
+                  className={`text-3xl font-bold tracking-tight hover:text-blue-400 transition-all duration-500 ${isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}
+                  style={{ transitionDelay: `${(i + 1) * 100}ms` }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+            <div className={`h-[1px] bg-white/10 w-full transition-all duration-700 delay-400 ${isMenuOpen ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`} />
+            <button className={`bg-white text-black py-4 rounded-2xl font-bold text-lg active:scale-95 transition-all duration-500 delay-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Main Scroll Container Track */}
       <div ref={trackRef} className="relative h-[900vh] bg-black">
         {/* Sticky Content Container */}
-        <div ref={containerRef} className="sticky top-0 h-screen overflow-hidden z-0">
+        <div ref={containerRef} className="sticky top-0 h-screen w-full overflow-hidden z-0">
           {/* Background Video */}
-          <div className="video-bg absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <div className="video-bg absolute inset-0 z-0 overflow-hidden pointer-events-none bg-black">
             <video
               autoPlay
               muted
               loop
               playsInline
-              className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover blur-[2px]"
+              className="absolute inset-0 w-full h-full object-cover blur-[2px]"
             >
               <source
                 src="/background-video.mp4"
