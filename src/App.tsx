@@ -44,8 +44,8 @@ export default function App() {
       scrollTrigger: {
         trigger: trackRef.current,
         start: "top top",
-        end: "+=1500%",
-        scrub: 1.5,
+        end: "+=3000%",
+        scrub: 2,
       }
     });
 
@@ -58,43 +58,43 @@ export default function App() {
       .set(".airpod-right", { opacity: 1, x: splitX, z: 20 })
       .fromTo(".hero-text",
         { opacity: 1, y: 0, scale: 1 },
-        { opacity: 0, y: -100, scale: 0.8, duration: 1 }
+        { opacity: 0, y: -100, scale: 0.8, duration: 1.5 }
       )
       .fromTo(".airpods-main",
         { y: "100vh", scale: 0.5, rotate: -15 },
-        { y: "0vh", scale: 1, rotate: 0, duration: 2 },
+        { y: "0vh", scale: 1, rotate: 0, duration: 2.5 },
         "-=0.5"
       )
       .fromTo(".middle-heading",
         { opacity: 0, scale: 0.8, y: 50 },
-        { opacity: 1, scale: 1, y: 0, duration: 1 },
+        { opacity: 1, scale: 1, y: 0, duration: 1.5 },
         "-=1"
       )
-      .to({}, { duration: 2.5 }) // Hold with 2 images split and Pure Sound text
+      .to({}, { duration: 4 }) // Hold with 2 images split and Pure Sound text
       .to(".middle-heading",
-        { opacity: 0, scale: 1.2, y: -50, duration: 0.8 }
+        { opacity: 0, scale: 1.2, y: -50, duration: 1 }
       )
       .to(".airpods-main", {
         x: "25%",
         scale: featureScale, // Larger on desktop for features
         rotate: 15,
-        duration: 2
+        duration: 2.5
       })
       .to(".airpod-left", {
         x: "0%",
-        duration: 1
+        duration: 1.5
       }, "<")
       .to(".airpod-right", {
         x: "0%",
-        duration: 1
+        duration: 1.5
       }, "<")
-      .to(".video-bg", { opacity: 0, duration: 1 }, "-=1")
+      .to(".video-bg", { opacity: 0, duration: 1.5 }, "-=1")
       .to(".feature-1", {
         opacity: 1,
         x: 0,
-        duration: 1
+        duration: 1.5
       }, "<")
-      .to({}, { duration: 3 }) // Hold feature 1
+      .to({}, { duration: 5 }) // Hold feature 1
       .to(".airpods-main", {
         x: isMobile ? "0%" : "-30%", // Adjusted x for larger scale
         y: isMobile ? "-4vh" : "0%", // Centered vertically above text on mobile
@@ -105,18 +105,18 @@ export default function App() {
       .to(".feature-1", {
         opacity: 0,
         x: -20,
-        duration: 0.8
+        duration: 1
       }, "-=3")
       .to(".feature-2", {
         opacity: 1,
         x: 0,
-        duration: 1
+        duration: 1.5
       }, "-=1.5")
-      .to({}, { duration: 3 }) // Hold feature 2
+      .to({}, { duration: 5 }) // Hold feature 2
       .to([".feature-1", ".feature-2"], {
         opacity: 0,
         y: -20,
-        duration: 0.5
+        duration: 0.8
       })
       .to(".airpods-main", {
         scale: 3,
@@ -128,7 +128,7 @@ export default function App() {
         { opacity: 0, scale: 0.5 },
         { opacity: 1, scale: 1, duration: 2 } // Slower text reveal
       )
-      .to({}, { duration: 4 }); // Hold final text at the end
+      .to({}, { duration: 5 }); // Hold final text at the end
 
     // H2 Chip Section Animations
     gsap.fromTo(".h2-content > *",
@@ -267,7 +267,7 @@ export default function App() {
       </div>
 
       {/* Main Scroll Container Track */}
-      <div ref={trackRef} className="relative h-[1600vh] bg-black">
+      <div ref={trackRef} className="relative h-[3100vh] bg-black">
         {/* Sticky Content Container */}
         <div ref={containerRef} className="sticky top-0 h-screen w-full overflow-hidden z-0">
           {/* Background Video */}

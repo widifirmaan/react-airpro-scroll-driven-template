@@ -2,7 +2,7 @@
 
 > Modern React 19 product showcase template featuring 3D scroll-driven GSAP Scrub animation and Apple-inspired design.
 
-AirPro is a responsive React template designed for interactive product launches, high-end consumer hardware showcases, and creative audio landing experiences. Built with React 19, GSAP ScrollTrigger, and Tailwind CSS v4, it synchronizes high-definition product visual assets with user scroll gestures across an extended 1500% scrub track (1600vh)—transitioning seamlessly through an ambient video hero stage, 3D perspective dual earbud separation with dynamic typography, Active Noise Cancellation callouts, Personalized Spatial Audio showcases, an H2 processor architecture narrative, interactive hardware telemetry stat cards, and an embedded 16:9 demonstration video.
+AirPro is a responsive React template designed for interactive product launches, high-end consumer hardware showcases, and creative audio landing experiences. Built with React 19, GSAP ScrollTrigger, and Tailwind CSS v4, it synchronizes high-definition product visual assets with user scroll gestures across an extended 3000% scrub track (3100vh)—transitioning seamlessly through an ambient video hero stage, 3D perspective dual earbud separation with dynamic typography, Active Noise Cancellation callouts, Personalized Spatial Audio showcases, an H2 processor architecture narrative, interactive hardware telemetry stat cards, and an embedded 16:9 demonstration video.
 
 [![Live Demo](https://img.shields.io/badge/Demo-airpro--smooth--react--template.vercel.app-10B981?style=flat-square&logo=vercel&logoColor=white)](https://airpro-smooth-react-template.vercel.app)
 [![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
@@ -34,7 +34,7 @@ AirPro is a responsive React template designed for interactive product launches,
 
 ## Features
 
-- **1500% Scroll Scrub Track**: 1600vh sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with smooth dampened scrub sensitivity (`scrub: 1.5`).
+- **3000% Scroll Scrub Track**: 3100vh sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with cinematic dampened scrub sensitivity (`scrub: 2`).
 - **3D Perspective Dual Earbud Separation**: Coordinated translation vectors splitting left and right acoustic units along 3D depth axes (`[perspective:1000px]`, `splitX = 100%` on desktop, `30%` on mobile) accompanied by bold `PURE SOUND` typographic scaling.
 - **Active Noise Cancellation Showcase**: Scroll-triggered angled earbud rotation with high-contrast callout highlighting up to 2x reduction in ambient background noise.
 - **Personalized Spatial Audio Showcase**: Dynamic repositioning transition highlighting personalized sound calibration tuned specifically for individual ear acoustics.
