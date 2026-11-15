@@ -34,42 +34,43 @@ AirPro is a high-impact, kinetic product showcase template recreating Apple's fl
 
 ---
 
-## Core Features
+## Features
 
-- **Linear Timeline Scrubbing**: Pinned viewport track with 800% scrub distance orchestrating multi-layer element transformations synchronously with wheel and touch gestures.
-- **Bi-Directional Earbud Separation**: Precision translation vectors moving left and right acoustic units along custom 3D depth planes.
-- **Exploded Component Architecture**: High-resolution exploded views dissecting the high-excursion Apple audio driver, amplifier, and acoustic mesh.
-- **Adaptive Mobile Transformation**: Breakpoint-aware GSAP timelines that automatically downscale translation matrices and element scales for mobile screens without horizontal spill.
-- **Smooth Preloader Gate**: Preloads media and font assets before disengaging the preloader overlay for jank-free first impressions.
-- **Responsive Navigation Drawer**: Fullscreen hamburger navigation drawer with animated slide-in transitions and scroll locking.
+- **800% Scroll Scrubbing Distance**: Fixed viewport track binding user mouse wheel and touch gestures directly to a timeline with 1:1 scrub sensitivity.
+- **Bi-Directional 3D Earbud Separation**: Coordinated mathematical translation vectors splitting left and right acoustic units along custom 3D depth planes (`splitX = 100%` on desktop, `30%` on mobile).
+- **Exploded Acoustic Architecture View**: High-resolution exploded views visualizing the custom high-excursion Apple audio driver, high dynamic range amplifier, and acoustic mesh.
+- **Breakpoint-Adaptive GSAP Scaling**: Dynamic viewport listener automatically modifying GSAP timeline scale factors (`featureScale: 0.5` mobile vs `0.8` desktop) to prevent horizontal overflow on smaller screens.
+- **Hardware-Accelerated Smooth Preloader**: Asset loading gate pre-caching audio graphics before revealing the main stage with smooth opacity transitions.
+- **Animated Mobile Navigation Drawer**: Fullscreen slide-over drawer with Lucide React icons, backdrop blur filters, and scroll locking.
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology | Details |
+| Category | Technologies | Purpose |
 | :--- | :--- | :--- |
-| **Framework** | React `19.0.0` | Modern React root with functional hooks and concurrent scheduling |
-| **Scroll Engine** | GSAP `3.14.2` | Industry standard GreenSock timeline and ScrollTrigger plugin |
-| **React Integration** | `@gsap/react` `2.1.2` | Safe animation lifecycle management with `useGSAP` |
-| **Styling** | Tailwind CSS `4.1.14` | High-performance atomic styling via `@tailwindcss/vite` plugin |
-| **Bundler** | Vite `6.2.0` | Ultra-fast module bundling and HMR dev server |
-| **Type Checking** | TypeScript `5.8.2` | Strict typings across components and GSAP refs |
+| **Core Framework** | React `19.0.0`, Vite `6.2.0` | Next-gen React concurrent runtime and lightning-fast ES module bundling |
+| **Scroll & Motion** | GSAP `3.14.2`, ScrollTrigger | Industry-standard timeline engine for scroll-linked visual scrubbing |
+| **React Animation Hooks** | `@gsap/react` `2.1.2`, Motion `12.23.24` | Scoped animation lifecycles and garbage-collected animation triggers |
+| **Styling** | Tailwind CSS `4.1.14` | Zero-runtime CSS utilities integrated directly via `@tailwindcss/vite` |
+| **Type Checking** | TypeScript `5.8.2` | Strict typings across DOM refs, animation properties, and GSAP timelines |
+| **Icons** | Lucide React `0.546.0` | Accessible vector SVG icons for menus, audio indicators, and actions |
+| **Deployment** | Vercel Edge Platform | Global CDN asset delivery with automatic SSL routing |
 
 ---
 
 ## Project Structure
 
-```text
-react-airpro-scroll-driven-template/
+```bash
+/
 ├── src/
 │   ├── App.tsx          # Master scroll canvas, GSAP timeline, and chapters
 │   ├── main.tsx         # React 19 entry point
 │   ├── index.css        # Tailwind 4 directives and custom scroll utilities
 │   └── lib/             # Classname merger helpers
-├── public/              # High-res product photography and SVG assets
-├── raw_screenshots/     # High-resolution production screen captures
-└── screenshots/         # MacBook Pro M4 & iPhone 16 Pro showcase mockups
+├── public/              # High-resolution product graphics and SVG assets
+├── screenshots/         # MacBook Pro M4 & iPhone 16 Pro showcase mockups
+└── README.md
 ```
 
 ---
@@ -79,33 +80,38 @@ react-airpro-scroll-driven-template/
 ### Prerequisites
 
 - **Node.js**: Version 18.0.0 or higher
-- **npm** or **yarn**
+- **npm** or **pnpm**
 
-### Installation
+### Installation & Setup
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/widifirmaan/react-airpro-scroll-driven-template.git
-   cd react-airpro-scroll-driven-template
-   ```
+> **Environment Variables:** No `.env` file or external API keys are required. All scroll timelines, 3D animations, and canvas scrubbing execute 100% locally in the browser.
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/widifirmaan/react-airpro-scroll-driven-template.git
+cd react-airpro-scroll-driven-template
 
-3. **Start local dev server**:
-   ```bash
-   npm run dev
-   ```
+# 2. Install dependencies
+npm install
 
-4. **Open in browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000).
+# 3. Start local development server
+npm run dev
+```
 
-5. **Build production bundle**:
-   ```bash
-   npm run build
-   ```
+Open [http://localhost:3000](http://localhost:3000) in your web browser.
+
+### Production Build
+
+```bash
+# Compile and optimize production distribution bundle
+npm run build
+```
+
+---
+
+## Author
+
+Developed by **[Widi Firmansyah](https://widifirmaan.web.id)**.
 
 ---
 
