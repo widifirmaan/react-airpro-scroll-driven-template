@@ -97,7 +97,7 @@ export default function App() {
       .to({}, { duration: 2 }) // Hold feature 1
       .to(".airpods-main", {
         x: isMobile ? "0%" : "-30%", // Adjusted x for larger scale
-        y: isMobile ? "-20vh" : "0%", // Slightly down for better centering on mobile
+        y: isMobile ? "-4vh" : "0%", // Centered vertically above text on mobile
         scale: featureScale,
         rotate: -15,
         duration: 3 // Slower transition to feature 2
@@ -332,7 +332,7 @@ export default function App() {
               <p className="text-base md:text-lg lg:text-2xl text-gray-400">Up to 2x more noise cancellation than the previous generation.</p>
             </div>
 
-            <div className="feature-2 opacity-0 translate-x-20 absolute bottom-10 md:bottom-1/4 left-6 right-6 md:left-auto md:right-20 max-w-3xl text-center md:text-right">
+            <div className="feature-2 opacity-0 translate-x-20 absolute bottom-28 md:bottom-1/4 left-6 right-6 md:left-auto md:right-20 max-w-3xl text-center md:text-right">
               <h3 className="text-4xl md:text-5xl lg:text-8xl font-bold tracking-tighter mb-4 leading-[0.9]">Personalized <br className="hidden md:block" /> Spatial Audio</h3>
               <p className="text-base md:text-lg lg:text-2xl text-gray-400">Sound that surrounds you, tuned specifically for your ears.</p>
             </div>
