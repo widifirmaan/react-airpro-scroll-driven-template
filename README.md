@@ -1,8 +1,8 @@
-# AirPro Landing Page
+# AirPro
 
-> Apple-inspired 3D scroll-driven product experience built with React 19, GSAP ScrollTrigger, and Vite.
+> Modern React 19 product showcase template featuring 3D scroll-driven GSAP Scrub animation and Apple-inspired design.
 
-AirPro is an interactive product showcase template built with React 19, GSAP ScrollTrigger, and Tailwind CSS 4. It synchronizes audio hardware visuals with user scroll input across an 800% scrub track—transitioning through hero product stages, dual earbud separation, exploded driver architecture views, H2 chip feature callouts, and battery performance metrics.
+AirPro is a responsive React template designed for interactive product launches, high-end consumer hardware showcases, and creative audio landing experiences. Built with React 19, GSAP ScrollTrigger, and Tailwind CSS v4, it synchronizes high-definition product visual assets with user scroll gestures across an 800% scrub track (900vh)—transitioning seamlessly through an ambient video hero stage, 3D perspective dual earbud separation with dynamic typography, Active Noise Cancellation callouts, Personalized Spatial Audio showcases, an H2 processor architecture narrative, interactive hardware telemetry stat cards, and an embedded 16:9 demonstration video.
 
 [![Live Demo](https://img.shields.io/badge/Demo-airpro--smooth--react--template.vercel.app-10B981?style=flat-square&logo=vercel&logoColor=white)](https://airpro-smooth-react-template.vercel.app)
 [![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
@@ -16,32 +16,34 @@ AirPro is an interactive product showcase template built with React 19, GSAP Scr
 ## Live Production
 
 - **URL:** [https://airpro-smooth-react-template.vercel.app](https://airpro-smooth-react-template.vercel.app)
-- **Deployment:** Vercel Edge Network
+- **Deployment:** Vercel (Edge Network with Global CDN Caching)
 
 ---
 
 ## Showcase
 
-| Desktop Interface (MacBook Pro M4) | Mobile Interface (iPhone 16 Pro) |
+| Desktop | Mobile |
 | :---: | :---: |
 | **Hero Stage Presentation Desktop**<br>![AirPro Hero Stage Desktop](screenshots/AirPro%20Hero%20Stage%20Desktop.png) | **Hero Stage Presentation Mobile**<br>![AirPro Hero Stage Mobile](screenshots/AirPro%20Hero%20Stage%20Mobile.png) |
 | **Dual Floating Earbuds Scroll Stage Desktop**<br>![AirPro Dual Earbuds Desktop](screenshots/AirPro%20Dual%20Earbuds%20Desktop.png) | **Dual Floating Earbuds Scroll Stage Mobile**<br>![AirPro Dual Earbuds Mobile](screenshots/AirPro%20Dual%20Earbuds%20Mobile.png) |
-| **Exploded Acoustic Driver Architecture Desktop**<br>![AirPro Acoustic Driver Desktop](screenshots/AirPro%20Acoustic%20Architecture%20Desktop.png) | **Exploded Acoustic Driver Architecture Mobile**<br>![AirPro Acoustic Driver Mobile](screenshots/AirPro%20Acoustic%20Architecture%20Mobile.png) |
-| **Active Noise Cancellation & H2 Chip Desktop**<br>![AirPro Noise Cancellation Desktop](screenshots/AirPro%20Active%20Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation & H2 Chip Mobile**<br>![AirPro Noise Cancellation Mobile](screenshots/AirPro%20Active%20Noise%20Cancellation%20Mobile.png) |
-| **Battery Performance & Tech Specs Desktop**<br>![AirPro Battery Specs Desktop](screenshots/AirPro%20Battery%20%26%20Specifications%20Desktop.png) | **Battery Performance & Tech Specs Mobile**<br>![AirPro Battery Specs Mobile](screenshots/AirPro%20Battery%20%26%20Specifications%20Mobile.png) |
+| **Active Noise Cancellation Stage Desktop**<br>![AirPro Active Noise Cancellation Desktop](screenshots/AirPro%20Active%20Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation Stage Mobile**<br>![AirPro Active Noise Cancellation Mobile](screenshots/AirPro%20Active%20Noise%20Cancellation%20Mobile.png) |
+| **Personalized Spatial Audio Stage Desktop**<br>![AirPro Spatial Audio Desktop](screenshots/AirPro%20Spatial%20Audio%20Desktop.png) | **Personalized Spatial Audio Stage Mobile**<br>![AirPro Spatial Audio Mobile](screenshots/AirPro%20Spatial%20Audio%20Mobile.png) |
+| **Hardware Telemetry & Battery Specs Desktop**<br>![AirPro Battery Specs Desktop](screenshots/AirPro%20Battery%20%26%20Specifications%20Desktop.png) | **Hardware Telemetry & Battery Specs Mobile**<br>![AirPro Battery Specs Mobile](screenshots/AirPro%20Battery%20%26%20Specifications%20Mobile.png) |
 
 ---
 
 ## Features
 
-- **800% Scroll Scrub Track**: Viewport scroll track binding user scroll input directly to a GSAP timeline with 1:1 scrub sensitivity.
-- **Dual Earbud Separation**: Coordinated translation vectors splitting left and right acoustic units along 3D depth axes (`splitX = 100%` desktop, `30%` mobile).
-- **Exploded Acoustic Driver View**: Visual breakdown illustrating high-excursion audio driver, dynamic range amplifier, and acoustic mesh layers.
-- **H2 Audio Chip Callout**: Scroll-triggered section highlighting H2 processor architecture with staggered entrance animations.
-- **Performance & Battery Specs**: Responsive telemetry cards detailing noise cancellation decibel reduction, battery longevity, and audio metrics.
-- **Responsive GSAP Scaling**: Dynamic viewport listener adjusting timeline scale parameters (`featureScale: 0.5` mobile vs `0.8` desktop) across screen sizes.
-- **Asset Preloader**: Pre-caching screen gate ensuring product imagery is ready before revealing the main stage.
-- **Mobile Navigation Drawer**: Slide-over drawer with Lucide React icons, backdrop blur filters, and scroll locking.
+- **800% Scroll Scrub Track**: 900vh sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with 1:1 scrub sensitivity (`scrub: 1`).
+- **3D Perspective Dual Earbud Separation**: Coordinated translation vectors splitting left and right acoustic units along 3D depth axes (`[perspective:1000px]`, `splitX = 100%` on desktop, `30%` on mobile) accompanied by bold `PURE SOUND` typographic scaling.
+- **Active Noise Cancellation Showcase**: Scroll-triggered angled earbud rotation with high-contrast callout highlighting up to 2x reduction in ambient background noise.
+- **Personalized Spatial Audio Showcase**: Dynamic repositioning transition highlighting personalized sound calibration tuned specifically for individual ear acoustics.
+- **H2 Audio Processor Architecture**: Dedicated dark section with ambient blue radial glow, glassmorphic image card with hover zoom, and technical narrative detailing custom amplifier and driver synergy.
+- **Hardware Telemetry Stat Cards**: Responsive grid of 4 glassmorphic metric cards (`6 hrs Battery Life`, `30 hrs With Case`, `IPX4 Water Resistant`, `5.3 Bluetooth`) featuring hover elevation and cyan accent transitions.
+- **Liquid Glass Floating Navbar**: Responsive floating pill navigation bar (`backdrop-blur-2xl`, `bg-white/5`) with desktop link anchors (`Overview`, `Tech Specs`, `Compare`), CTA button, and mobile slide-down drawer with Lucide icon toggles and body scroll locking.
+- **Background Video Atmosphere**: Continuous ambient video loop layer (`/background-video.mp4`) with Gaussian blur and dark radial gradient overlay for high-end cinematic depth.
+- **Embedded 16:9 Demonstration Video**: Responsive aspect-ratio glassmorphic player embedding official product demonstration video from YouTube with automated autoplay, mute, and loop controls.
+- **Interactive Global Preloader**: Screen-blocking caching gate with spinner animation ensuring media and 3D assets are fully loaded before revealing the stage.
 
 ---
 
@@ -49,12 +51,12 @@ AirPro is an interactive product showcase template built with React 19, GSAP Scr
 
 | Category | Technologies | Purpose |
 | :--- | :--- | :--- |
-| **Core Framework** | React `19.0.0`, Vite `6.2.0` | React frontend foundation with Vite bundling and development server |
-| **Scroll & Motion** | GSAP `3.14.2`, ScrollTrigger | Timeline engine for scroll-linked visual scrubbing |
-| **Animation Hooks** | `@gsap/react` `2.1.2`, Motion `12.23.24` | Scoped React animation lifecycles and gesture triggers |
-| **Styling** | Tailwind CSS `4.1.14` | Utility styling integrated via `@tailwindcss/vite` |
-| **Type Checking** | TypeScript `5.8.2` | Typed components, DOM refs, and GSAP timeline parameters |
-| **Icons** | Lucide React `0.546.0` | Vector line icons for navigation and audio indicators |
+| **Core Framework** | React `19.0.0`, Vite `6.2.0` | Frontend foundation with fast Vite HMR and production bundle optimization |
+| **Scroll & Timeline** | GSAP `3.14.2`, ScrollTrigger, `@gsap/react` `2.1.2` | Hardware-accelerated 3D scroll-scrub timeline and element choreography |
+| **Styling & Theme** | Tailwind CSS `4.1.14` (`@tailwindcss/vite`) | Utility-first styling with modern `@theme` design tokens |
+| **Type System** | TypeScript `5.8.2` | Type-safe components, DOM refs, and GSAP timeline parameters |
+| **Iconography** | Lucide React `0.546.0` | Vector line icons for navigation toggles and audio controls |
+| **Utility Helpers** | `clsx 2.1.1`, `tailwind-merge 3.5.0` | Conditional CSS class concatenation and conflicting utility resolution |
 
 ---
 
@@ -63,11 +65,12 @@ AirPro is an interactive product showcase template built with React 19, GSAP Scr
 ```bash
 /
 ├── src/
-│   ├── App.tsx          # Master scroll canvas, GSAP timeline, and chapters
-│   ├── main.tsx         # React 19 entry point
-│   ├── index.css        # Tailwind 4 directives and custom scroll utilities
-│   └── lib/             # Classname merger helpers
-├── public/              # High-resolution product graphics and SVG assets
+│   ├── App.tsx          # Master scroll canvas, GSAP timeline, and sections
+│   ├── main.tsx         # React 19 application root entry point
+│   ├── index.css        # Tailwind 4 directives and liquid glass styles
+│   └── lib/
+│       └── utils.ts     # Classname concatenation helper (cn)
+├── public/              # Background ambient video and static assets
 ├── screenshots/         # MacBook Pro M4 & iPhone 16 Pro showcase mockups
 └── README.md
 ```
