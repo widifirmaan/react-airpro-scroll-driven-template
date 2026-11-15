@@ -1,93 +1,114 @@
-# 🎧 Airpro - React Scroll-driven Template
+# AirPro Landing Page
 
-**Airpro** is a high-performance, scroll-driven interactive landing page built with **React 19**, **Vite 6**, and **GSAP 3**. It leverages advanced animation techniques and modern CSS architectures to deliver a premium, Apple-inspired digital experience. Rebuilt from the sound up, it features a custom **Liquid Glass Design System** implemented via **Tailwind CSS v4**, featuring high-end glassmorphism, fluid motion, and hardware-accelerated 3D transforms.
+> Apple-inspired 3D scroll-driven product experience built with React 19, GSAP ScrollTrigger, and Vite.
 
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![GSAP](https://img.shields.io/badge/GSAP_3-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+AirPro is a high-impact, kinetic product showcase template recreating Apple's fluid scroll-scrubbing web experience. Built with React 19, GSAP (GreenSock Animation Platform) ScrollTrigger, and Tailwind CSS 4, it synchronizes high-precision 3D headphone hardware visuals with user scroll gestures—transitioning from hero stages and dual floating earbuds to exploded acoustic driver architectures and noise-cancellation specs.
 
----
-
-Explore the visual journey of **Airpro** through our interactive gallery.
-
-| | |
-|:---:|:---:|
-| ![Hero](screenshot/Hero%20Page.png)<br>**Hero Section** | ![Reveal](screenshot/Product%20Page.png)<br>**Animated Product Reveal** |
-| ![Features](screenshot/Product%20Info%20Page.png)<br>**Feature Deep-Dive** | ![Footer](screenshot/Footer%20Page.png)<br>**Liquid Glass Stats & Footer** |
+[![Live Demo](https://img.shields.io/badge/Demo-airpro--smooth--react--template.vercel.app-10B981?style=flat-square&logo=vercel&logoColor=white)](https://airpro-smooth-react-template.vercel.app)
+[![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![GSAP 3](https://img.shields.io/badge/GSAP-3.14.2-88CE02?style=flat-square&logo=greensock&logoColor=white)](https://gsap.com/)
+[![Vite 6](https://img.shields.io/badge/Vite-6.2.0-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind-v4.1-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 ---
 
-### 🎮 Immersive Motion
-*   **GSAP ScrollTrigger**: Physics-based scroll interpolation (`scrub: 1`) for cinematic storytelling.
-*   **3D Perspective**: Implements hardware-accelerated 3D transforms (`preserve-3d`) for realistic product rotation.
-*   **Staggered Entrance**: Content sections feature orchestrated entry animations for a premium feel.
+## Live Production
 
-### 🧩 Liquid Glass Design
-*   **Glassmorphism 2.0**: High-density `backdrop-blur-3xl` with semi-transparent tinted backgrounds.
-*   **Floating Navigation**: Capsule-shaped floating navbar with dynamic hover interactions and center-out transitions.
-*   **Gooey Preloader**: Event-driven global loading system featuring liquid SVG filters and curtain reveal animations.
-
-### 📱 Technical Excellence
-*   **Mobile-First Core**: Fully responsive architecture that adapts complex GSAP timelines across all viewports.
-*   **Performance First**: Zero layout shifts, optimized PostCSS ordering, and `will-change-transform` GPU offloading.
-*   **React 19 Ready**: Utilizing the latest concurrent rendering and state management patterns.
+- **URL:** [https://airpro-smooth-react-template.vercel.app](https://airpro-smooth-react-template.vercel.app)
+- **Deployment:** Vercel Edge Network
+- **Performance:** Hardware-accelerated CSS GPU matrix transformations (`will-change: transform`)
 
 ---
 
-### 🛠️ Architecture & Logic
-*   **Framework**: React 19 (Hooks, StrictMode)
-*   **Animations**: GSAP (ScrollTrigger, useGSAP)
-*   **Styling**: Tailwind CSS v4 (Alpha), Modern CSS Variables
-*   **Iconography**: Lucide React
-*   **Tooling**: Vite 6, PostCSS, TypeScript
+## Showcase
+
+| Desktop Interface (MacBook Pro M4) | Mobile Interface (iPhone 16 Pro) |
+| :---: | :---: |
+| **Hero Stage Presentation Desktop**<br>![AirPro Hero Stage Desktop](screenshots/AirPro%20Hero%20Stage%20Desktop.png) | **Hero Stage Presentation Mobile**<br>![AirPro Hero Stage Mobile](screenshots/AirPro%20Hero%20Stage%20Mobile.png) |
+| **Dual Floating Earbuds Scroll Stage Desktop**<br>![AirPro Dual Earbuds Desktop](screenshots/AirPro%20Dual%20Earbuds%20Desktop.png) | **Dual Floating Earbuds Scroll Stage Mobile**<br>![AirPro Dual Earbuds Mobile](screenshots/AirPro%20Dual%20Earbuds%20Mobile.png) |
+| **Exploded Acoustic Driver Architecture Desktop**<br>![AirPro Acoustic Driver Desktop](screenshots/AirPro%20Acoustic%20Architecture%20Desktop.png) | **Exploded Acoustic Driver Architecture Mobile**<br>![AirPro Acoustic Driver Mobile](screenshots/AirPro%20Acoustic%20Architecture%20Mobile.png) |
+| **Active Noise Cancellation & H2 Chip Desktop**<br>![AirPro Noise Cancellation Desktop](screenshots/AirPro%20Active%20Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation & H2 Chip Mobile**<br>![AirPro Noise Cancellation Mobile](screenshots/AirPro%20Active%20Noise%20Cancellation%20Mobile.png) |
+| **Battery Performance & Tech Specs Desktop**<br>![AirPro Battery Specs Desktop](screenshots/AirPro%20Battery%20%26%20Specifications%20Desktop.png) | **Battery Performance & Tech Specs Mobile**<br>![AirPro Battery Specs Mobile](screenshots/AirPro%20Battery%20%26%20Specifications%20Mobile.png) |
 
 ---
 
-### 📂 Project Structure
-```bash
-/
+## Core Features
+
+- **Linear Timeline Scrubbing**: Pinned viewport track with 800% scrub distance orchestrating multi-layer element transformations synchronously with wheel and touch gestures.
+- **Bi-Directional Earbud Separation**: Precision translation vectors moving left and right acoustic units along custom 3D depth planes.
+- **Exploded Component Architecture**: High-resolution exploded views dissecting the high-excursion Apple audio driver, amplifier, and acoustic mesh.
+- **Adaptive Mobile Transformation**: Breakpoint-aware GSAP timelines that automatically downscale translation matrices and element scales for mobile screens without horizontal spill.
+- **Smooth Preloader Gate**: Preloads media and font assets before disengaging the preloader overlay for jank-free first impressions.
+- **Responsive Navigation Drawer**: Fullscreen hamburger navigation drawer with animated slide-in transitions and scroll locking.
+
+---
+
+## Tech Stack
+
+| Layer | Technology | Details |
+| :--- | :--- | :--- |
+| **Framework** | React `19.0.0` | Modern React root with functional hooks and concurrent scheduling |
+| **Scroll Engine** | GSAP `3.14.2` | Industry standard GreenSock timeline and ScrollTrigger plugin |
+| **React Integration** | `@gsap/react` `2.1.2` | Safe animation lifecycle management with `useGSAP` |
+| **Styling** | Tailwind CSS `4.1.14` | High-performance atomic styling via `@tailwindcss/vite` plugin |
+| **Bundler** | Vite `6.2.0` | Ultra-fast module bundling and HMR dev server |
+| **Type Checking** | TypeScript `5.8.2` | Strict typings across components and GSAP refs |
+
+---
+
+## Project Structure
+
+```text
+react-airpro-scroll-driven-template/
 ├── src/
-│   ├── App.tsx          # Main logic & GSAP timelines
-│   ├── index.css        # Liquid Glass design system
-│   └── main.tsx         # App entry & global CSS
-├── public/              # High-bitrate video & 4K media
-├── index.html           # Font & Meta optimization
-├── package.json         # Dependency manifest
-└── vite.config.ts       # Vite & Tailwind configuration
+│   ├── App.tsx          # Master scroll canvas, GSAP timeline, and chapters
+│   ├── main.tsx         # React 19 entry point
+│   ├── index.css        # Tailwind 4 directives and custom scroll utilities
+│   └── lib/             # Classname merger helpers
+├── public/              # High-res product photography and SVG assets
+├── raw_screenshots/     # High-resolution production screen captures
+└── screenshots/         # MacBook Pro M4 & iPhone 16 Pro showcase mockups
 ```
 
 ---
 
-### 📦 Quick Start
+## Getting Started & Local Development
 
-```bash
-# Clone the repository
-git clone https://github.com/widifirmaan/airpro-smooth-react-template.git
+### Prerequisites
 
-# Install dependencies
-npm install
+- **Node.js**: Version 18.0.0 or higher
+- **npm** or **yarn**
 
-# Start development server
-npm run dev
+### Installation
 
-# Build for production
-npm run build
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/widifirmaan/react-airpro-scroll-driven-template.git
+   cd react-airpro-scroll-driven-template
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start local dev server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000).
+
+5. **Build production bundle**:
+   ```bash
+   npm run build
+   ```
 
 ---
 
-## 👥 Authors
-Developed with ❤️ by:
-*   **AI Studio Builder** - Lead Implementation
-*   **Widi Firmansyah** - Product Vision & Iteration
+## License
 
----
-
-## 📜 License
-This project is developed for educational and showcase purposes. Any distribution or commercial use requires prior authorization.
-
----
-
-**Developed for a better sound experience** 🚀
+This project is licensed under the [MIT License](LICENSE).
