@@ -44,8 +44,8 @@ export default function App() {
       scrollTrigger: {
         trigger: trackRef.current,
         start: "top top",
-        end: "+=800%",
-        scrub: 1,
+        end: "+=1500%",
+        scrub: 1.5,
       }
     });
 
@@ -70,7 +70,7 @@ export default function App() {
         { opacity: 1, scale: 1, y: 0, duration: 1 },
         "-=1"
       )
-      .to({}, { duration: 1.5 }) // Short hold with 2 images split
+      .to({}, { duration: 2.5 }) // Hold with 2 images split and Pure Sound text
       .to(".middle-heading",
         { opacity: 0, scale: 1.2, y: -50, duration: 0.8 }
       )
@@ -94,7 +94,7 @@ export default function App() {
         x: 0,
         duration: 1
       }, "<")
-      .to({}, { duration: 2 }) // Hold feature 1
+      .to({}, { duration: 3 }) // Hold feature 1
       .to(".airpods-main", {
         x: isMobile ? "0%" : "-30%", // Adjusted x for larger scale
         y: isMobile ? "-4vh" : "0%", // Centered vertically above text on mobile
@@ -112,7 +112,7 @@ export default function App() {
         x: 0,
         duration: 1
       }, "-=1.5")
-      .to({}, { duration: 2 }) // Hold feature 2
+      .to({}, { duration: 3 }) // Hold feature 2
       .to([".feature-1", ".feature-2"], {
         opacity: 0,
         y: -20,
@@ -128,7 +128,7 @@ export default function App() {
         { opacity: 0, scale: 0.5 },
         { opacity: 1, scale: 1, duration: 2 } // Slower text reveal
       )
-      .to({}, { duration: 3 }); // Hold final text at the end
+      .to({}, { duration: 4 }); // Hold final text at the end
 
     // H2 Chip Section Animations
     gsap.fromTo(".h2-content > *",
@@ -267,7 +267,7 @@ export default function App() {
       </div>
 
       {/* Main Scroll Container Track */}
-      <div ref={trackRef} className="relative h-[900vh] bg-black">
+      <div ref={trackRef} className="relative h-[1600vh] bg-black">
         {/* Sticky Content Container */}
         <div ref={containerRef} className="sticky top-0 h-screen w-full overflow-hidden z-0">
           {/* Background Video */}
