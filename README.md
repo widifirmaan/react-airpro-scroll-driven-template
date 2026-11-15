@@ -17,7 +17,6 @@ AirPro is an interactive product showcase template built with React 19, GSAP Scr
 
 - **URL:** [https://airpro-smooth-react-template.vercel.app](https://airpro-smooth-react-template.vercel.app)
 - **Deployment:** Vercel Edge Network
-- **Performance:** Hardware-accelerated CSS GPU matrix transformations (`will-change: transform`)
 
 ---
 
