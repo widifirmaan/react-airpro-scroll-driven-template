@@ -55,7 +55,6 @@ AirPro is an interactive product showcase template built with React 19, GSAP Scr
 | **Styling** | Tailwind CSS `4.1.14` | Utility styling integrated via `@tailwindcss/vite` |
 | **Type Checking** | TypeScript `5.8.2` | Typed components, DOM refs, and GSAP timeline parameters |
 | **Icons** | Lucide React `0.546.0` | Vector line icons for navigation and audio indicators |
-| **Deployment** | Vercel Edge Platform | Static asset delivery and edge CDN routing |
 
 ---
 
