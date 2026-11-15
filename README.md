@@ -10,7 +10,6 @@ AirPro is a high-impact, kinetic product showcase template recreating Apple's fl
 [![Vite 6](https://img.shields.io/badge/Vite-6.2.0-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS 4](https://img.shields.io/badge/Tailwind-v4.1-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 ---
 
@@ -39,8 +38,10 @@ AirPro is a high-impact, kinetic product showcase template recreating Apple's fl
 - **800% Scroll Scrubbing Distance**: Fixed viewport track binding user mouse wheel and touch gestures directly to a timeline with 1:1 scrub sensitivity.
 - **Bi-Directional 3D Earbud Separation**: Coordinated mathematical translation vectors splitting left and right acoustic units along custom 3D depth planes (`splitX = 100%` on desktop, `30%` on mobile).
 - **Exploded Acoustic Architecture View**: High-resolution exploded views visualizing the custom high-excursion Apple audio driver, high dynamic range amplifier, and acoustic mesh.
+- **H2 Computational Audio Chip Spotlight**: Staggered scroll-triggered entrance revealing Apple H2 chip architecture with custom ease curves and dynamic depth scaling.
+- **Performance & Acoustic Telemetry Grid**: Responsive telemetry cards detailing active noise cancellation decibel reduction, battery longevity, and low-distortion audio metrics.
 - **Breakpoint-Adaptive GSAP Scaling**: Dynamic viewport listener automatically modifying GSAP timeline scale factors (`featureScale: 0.5` mobile vs `0.8` desktop) to prevent horizontal overflow on smaller screens.
-- **Hardware-Accelerated Smooth Preloader**: Asset loading gate pre-caching audio graphics before revealing the main stage with smooth opacity transitions.
+- **Hardware-Accelerated Asset Preloader**: Asset loading gate pre-caching audio graphics before revealing the main stage with smooth opacity transitions.
 - **Animated Mobile Navigation Drawer**: Fullscreen slide-over drawer with Lucide React icons, backdrop blur filters, and scroll locking.
 
 ---
@@ -112,9 +113,3 @@ npm run build
 ## Author
 
 Developed by **[Widi Firmansyah](https://widifirmaan.web.id)**.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
