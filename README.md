@@ -90,8 +90,8 @@ AirPro is a responsive React template designed for interactive product launches,
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/widifirmaan/react-airpro-scroll-driven-template.git
-cd react-airpro-scroll-driven-template
+git clone https://github.com/widifirmaan/reactjs-airpro-template.git
+cd reactjs-airpro-template
 
 # 2. Install dependencies
 npm install
