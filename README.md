@@ -1,8 +1,8 @@
 # AirPro
 
-> Modern React 19 product showcase template featuring 3D scroll-driven GSAP Scrub animation and Apple-inspired design.
+> Responsive React 19 product showcase template featuring scroll-driven GSAP animation.
 
-AirPro is a responsive React template designed for interactive product launches, high-end consumer hardware showcases, and creative audio landing experiences. Built with React 19, GSAP ScrollTrigger, and Tailwind CSS v4, it synchronizes high-definition product visual assets with user scroll gestures across an extended 3000% scrub track (3100vh)—transitioning seamlessly through an ambient video hero stage, 3D perspective dual earbud separation with dynamic typography, Active Noise Cancellation callouts, Personalized Spatial Audio showcases, an H2 processor architecture narrative, interactive hardware telemetry stat cards, and an embedded 16:9 demonstration video.
+AirPro is a responsive React web template designed for hardware product showcases and creative landing pages. Built with React 19, GSAP ScrollTrigger, and Tailwind CSS v4, it synchronizes product visuals with scroll progression—featuring an ambient video hero section, dual earbud perspective transitions, feature callouts (Active Noise Cancellation, Spatial Audio), hardware specification cards, and an embedded demonstration video.
 
 [![Live Demo](https://img.shields.io/badge/Demo-airpro--smooth--react--template.vercel.app-10B981?style=flat-square&logo=vercel&logoColor=white)](https://airpro-smooth-react-template.vercel.app)
 [![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
@@ -16,7 +16,7 @@ AirPro is a responsive React template designed for interactive product launches,
 ## Live Production
 
 - **URL:** [https://airpro-smooth-react-template.vercel.app](https://airpro-smooth-react-template.vercel.app)
-- **Deployment:** Vercel (Edge Network with Global CDN Caching)
+- **Deployment:** Vercel
 
 ---
 
@@ -28,22 +28,21 @@ AirPro is a responsive React template designed for interactive product launches,
 | **Dual Floating Earbuds Scroll Stage Desktop**<br>![AirPro Dual Earbuds Desktop](screenshots/AirPro%20Dual%20Earbuds%20Desktop.png) | **Dual Floating Earbuds Scroll Stage Mobile**<br>![AirPro Dual Earbuds Mobile](screenshots/AirPro%20Dual%20Earbuds%20Mobile.png) |
 | **Active Noise Cancellation Stage Desktop**<br>![AirPro Active Noise Cancellation Desktop](screenshots/AirPro%20Active%20Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation Stage Mobile**<br>![AirPro Active Noise Cancellation Mobile](screenshots/AirPro%20Active%20Noise%20Cancellation%20Mobile.png) |
 | **Personalized Spatial Audio Stage Desktop**<br>![AirPro Spatial Audio Desktop](screenshots/AirPro%20Spatial%20Audio%20Desktop.png) | **Personalized Spatial Audio Stage Mobile**<br>![AirPro Spatial Audio Mobile](screenshots/AirPro%20Spatial%20Audio%20Mobile.png) |
-| **Hardware Telemetry & Battery Specs Desktop**<br>![AirPro Battery Specs Desktop](screenshots/AirPro%20Battery%20%26%20Specifications%20Desktop.png) | **Hardware Telemetry & Battery Specs Mobile**<br>![AirPro Battery Specs Mobile](screenshots/AirPro%20Battery%20%26%20Specifications%20Mobile.png) |
+| **Hardware Specifications Desktop**<br>![AirPro Battery Specs Desktop](screenshots/AirPro%20Battery%20%26%20Specifications%20Desktop.png) | **Hardware Specifications Mobile**<br>![AirPro Battery Specs Mobile](screenshots/AirPro%20Battery%20%26%20Specifications%20Mobile.png) |
 
 ---
 
 ## Features
 
-- **3000% Scroll Scrub Track**: 3100vh sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with cinematic dampened scrub sensitivity (`scrub: 2`).
-- **3D Perspective Dual Earbud Separation**: Coordinated translation vectors splitting left and right acoustic units along 3D depth axes (`[perspective:1000px]`, `splitX = 100%` on desktop, `30%` on mobile) accompanied by bold `PURE SOUND` typographic scaling.
-- **Active Noise Cancellation Showcase**: Scroll-triggered angled earbud rotation with high-contrast callout highlighting up to 2x reduction in ambient background noise.
-- **Personalized Spatial Audio Showcase**: Dynamic repositioning transition highlighting personalized sound calibration tuned specifically for individual ear acoustics.
-- **H2 Audio Processor Architecture**: Dedicated dark section with ambient blue radial glow, glassmorphic image card with hover zoom, and technical narrative detailing custom amplifier and driver synergy.
-- **Hardware Telemetry Stat Cards**: Responsive grid of 4 glassmorphic metric cards (`6 hrs Battery Life`, `30 hrs With Case`, `IPX4 Water Resistant`, `5.3 Bluetooth`) featuring hover elevation and cyan accent transitions.
-- **Liquid Glass Floating Navbar**: Responsive floating pill navigation bar (`backdrop-blur-2xl`, `bg-white/5`) with desktop link anchors (`Overview`, `Tech Specs`, `Compare`), CTA button, and mobile slide-down drawer with Lucide icon toggles and body scroll locking.
-- **Background Video Atmosphere**: Continuous ambient video loop layer (`/background-video.mp4`) with Gaussian blur and dark radial gradient overlay for high-end cinematic depth.
-- **Embedded 16:9 Demonstration Video**: Responsive aspect-ratio glassmorphic player embedding official product demonstration video from YouTube with automated autoplay, mute, and loop controls.
-- **Interactive Global Preloader**: Screen-blocking caching gate with spinner animation ensuring media and 3D assets are fully loaded before revealing the stage.
+- **Scroll-Driven GSAP Timeline**: Sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with smooth scrub synchronization (`scrub: 2`).
+- **Perspective Earbud Animation**: Coordinated translation vectors separating left and right audio units along depth axes accompanied by typographic transitions.
+- **Feature Callouts**: Scroll-triggered callout sections showcasing Active Noise Cancellation and Personalized Spatial Audio highlights.
+- **Audio Processor Overview**: Dark feature block with ambient glow detailing custom amplifier and driver synergy.
+- **Product Specification Cards**: Responsive grid of metric cards (`6 hrs Battery Life`, `30 hrs With Case`, `IPX4 Water Resistant`, `5.3 Bluetooth`) with hover states.
+- **Floating Navigation Bar**: Responsive floating pill navigation bar (`backdrop-blur-2xl`, `bg-white/5`) with desktop link anchors, CTA button, and mobile drawer.
+- **Background Video Atmosphere**: Continuous ambient video loop layer (`/background-video.mp4`) with blur and radial gradient overlay.
+- **Embedded Demonstration Video**: Responsive 16:9 player embedding product demonstration video from YouTube.
+- **Asset Preloader**: Preloader gate ensuring video and image assets are loaded before revealing the stage.
 
 ---
 
