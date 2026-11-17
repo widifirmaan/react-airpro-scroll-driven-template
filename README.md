@@ -1,6 +1,6 @@
 # AirPro
 
-> Template etalase produk hardware modern berbasis React 19, Tailwind CSS v4, dan animasi scroll interaktif GSAP ScrollTrigger.
+> Responsive hardware product showcase template built with React 19, Tailwind CSS v4, and GSAP ScrollTrigger animation choreography.
 
 [![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![GSAP 3](https://img.shields.io/badge/GSAP-3.14.2-88CE02?style=flat-square&logo=greensock&logoColor=white)](https://gsap.com/)
@@ -17,84 +17,84 @@
 
 ---
 
-## Screenshot
+## Screenshots
 
 | Desktop | Mobile |
 | :---: | :---: |
-| **Hero Stage & Video Latar Belakang**<br>![Hero](screenshots/Hero%20Desktop.png) | **Hero Stage & Video Latar Belakang**<br>![Hero](screenshots/Hero%20Mobile.png) |
-| **Pemisahan Unit Earbud (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Desktop.png) | **Pemisahan Unit Earbud (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Mobile.png) |
-| **Koreografi Pure Sound & Spatial Audio**<br>![Spatial Audio](screenshots/Spatial%20Audio%20Desktop.png) | **Koreografi Pure Sound & Spatial Audio**<br>![Spatial Audio](screenshots/Spatial%20Audio%20Mobile.png) |
-| **Fitur Performa Chip Audio H2**<br>![H2 Chip](screenshots/H2%20Chip%20Desktop.png) | **Fitur Performa Chip Audio H2**<br>![H2 Chip](screenshots/H2%20Chip%20Mobile.png) |
-| **Grid Kartu Spesifikasi Baterai & Daya Tahan**<br>![Spesifikasi](screenshots/Spesifikasi%20Desktop.png) | **Grid Kartu Spesifikasi Baterai & Daya Tahan**<br>![Spesifikasi](screenshots/Spesifikasi%20Mobile.png) |
-| **Pemutar Video Demonstrasi Produk**<br>![Video Demo](screenshots/Video%20Demo%20Desktop.png) | **Pemutar Video Demonstrasi Produk**<br>![Video Demo](screenshots/Video%20Demo%20Mobile.png) |
+| **Hero Stage Presentation & Ambient Video**<br>![Hero](screenshots/Hero%20Desktop.png) | **Hero Stage Presentation & Ambient Video**<br>![Hero](screenshots/Hero%20Mobile.png) |
+| **Dual Earbuds Separation (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Desktop.png) | **Dual Earbuds Separation (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Mobile.png) |
+| **Pure Sound & Spatial Audio Stage**<br>![Spatial Audio](screenshots/Spatial%20Audio%20Desktop.png) | **Pure Sound & Spatial Audio Stage**<br>![Spatial Audio](screenshots/Spatial%20Audio%20Mobile.png) |
+| **H2 Audio Chip Architecture & Performance**<br>![H2 Chip](screenshots/H2%20Chip%20Desktop.png) | **H2 Audio Chip Architecture & Performance**<br>![H2 Chip](screenshots/H2%20Chip%20Mobile.png) |
+| **Hardware Battery & Specifications Grid**<br>![Spesifikasi](screenshots/Spesifikasi%20Desktop.png) | **Hardware Battery & Specifications Grid**<br>![Spesifikasi](screenshots/Spesifikasi%20Mobile.png) |
+| **Product Demonstration Video Showcase**<br>![Video Demo](screenshots/Video%20Demo%20Desktop.png) | **Product Demonstration Video Showcase**<br>![Video Demo](screenshots/Video%20Demo%20Mobile.png) |
 
 ---
 
-## Fitur
+## Features
 
-- **Timeline Scroll-Driven GSAP**: Canvas *sticky* yang mengikat pergerakan scroll pengguna langsung ke timeline GSAP (`useGSAP`) dengan sinkronisasi scrub (`scrub: 2`).
-- **Koreografi Perspektif Unit Earbud**: Transformasi pemisahan unit earbud kiri dan kanan di sepanjang sumbu 3D yang tersinkronisasi dengan perubahan tipografi judul.
-- **Section Callout Fitur**: Pemunculan bertahap fitur Active Noise Cancellation dan Personalized Spatial Audio yang disinkronkan dengan posisi scroll.
-- **Kartu Arsitektur Audio H2**: Blok presentasi fitur berlatar gelap dengan pencahayaan ambient glow yang menjelaskan performa chip dan driver kustom.
-- **Grid Kartu Spesifikasi Produk**: Tata letak kartu metrik spesifikasi (Baterai 6 jam, Total 30 jam dengan casing, Resistansi air IPX4, Bluetooth 5.3) dengan interaksi hover dinamis.
-- **Floating Pill Navigation Bar**: Bilah navigasi melayang responsif (`backdrop-blur-2xl`) dengan menu desktop, tombol Call-to-Action, dan menu drawer mobile.
-- **Video Latar Belakang Ambient**: Pemutaran video atmosferik berkelanjutan (`/background-video.mp4`) dengan efek overlay gradient radial.
-- **Pemutar Demonstrasi Video Produk**: Kontainer tersemat dengan rasio 16:9 untuk video showcase produk.
-- **Asset Preloader**: Gerbang pemuatan aset yang memastikan video dan visual selesai dimuat sebelum panggung utama ditampilkan.
+- **Scroll-Driven GSAP Timeline**: Sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with smooth scrub synchronization (`scrub: 2`).
+- **Perspective Earbud Choreography**: Coordinated translation vectors separating left and right audio units along 3D axes accompanied by typographic headline transitions.
+- **Section Feature Callouts**: Scroll-triggered callouts displaying Active Noise Cancellation and Personalized Spatial Audio highlights.
+- **H2 Audio Chip Presentation**: Dark feature block with ambient blue lighting detailing custom amplifier and driver performance.
+- **Hardware Specification Cards Grid**: Responsive grid of metric cards (6 hrs Battery Life, 30 hrs With Case, IPX4 Water Resistance, Bluetooth 5.3) with glassmorphism hover interactions.
+- **Floating Pill Navigation Bar**: Responsive floating pill navigation bar (`backdrop-blur-2xl`) with desktop link anchors, CTA action button, and mobile drawer.
+- **Ambient Background Video**: Continuous ambient video loop layer (`/background-video.mp4`) with radial gradient overlay.
+- **Product Demonstration Video**: Responsive 16:9 embedded player showcasing the product video.
+- **Asset Preloader**: Preloader gate ensuring video and image assets are fully loaded before revealing the main stage.
 
 ---
 
 ## Tech Stack
 
-| Kategori | Teknologi | Deskripsi / Peran |
+| Category | Technology | Description / Purpose |
 | :--- | :--- | :--- |
-| **Framework Utama** | React `19.0.0`, Vite `6.2.0` | Fondasi SPA modern dengan build cepat dan Hot Module Replacement (HMR) |
-| **Animasi & Timeline** | GSAP `3.14.2`, ScrollTrigger, `@gsap/react` `2.1.2` | Engine koreografi animasi 3D dan scroll-scrub yang diakselerasi hardware |
-| **Styling** | Tailwind CSS `4.1.14` (`@tailwindcss/vite`) | Desain responsif modern berbasis utility dan token `@theme` |
-| **Type System** | TypeScript `5.8.2` | Keamanan tipe komponen, referensi DOM, dan parameter timeline |
-| **Ikonografi** | Lucide React `0.546.0` | Ikon vektor minimalis untuk menu navigasi dan kontrol |
-| **Utilitas Kelas** | `clsx 2.1.1`, `tailwind-merge 3.5.0` | Penggabungan kelas CSS kondisional tanpa konflik utilitas |
+| **Core Framework** | React `19.0.0`, Vite `6.2.0` | Modern SPA foundation with fast Vite HMR and production bundle optimization |
+| **Scroll & Timeline** | GSAP `3.14.2`, ScrollTrigger, `@gsap/react` `2.1.2` | Hardware-accelerated 3D scroll-scrub timeline and choreography |
+| **Styling** | Tailwind CSS `4.1.14` (`@tailwindcss/vite`) | Utility-first styling with modern `@theme` design tokens |
+| **Type System** | TypeScript `5.8.2` | Type-safe components, DOM refs, and GSAP timeline parameters |
+| **Iconography** | Lucide React `0.546.0` | Minimalist line icons for navigation toggles and controls |
+| **Class Utilities** | `clsx 2.1.1`, `tailwind-merge 3.5.0` | Conditional CSS class concatenation and conflicting utility resolution |
 
 ---
 
-## Panduan Setup & Menjalankan Lokal
+## Local Setup & Deployment
 
-### 1. Prasyarat Sistem
+### 1. Prerequisites
 
-- **Node.js**: Versi `18.0.0` atau lebih baru (`20.x` direkomendasikan)
-- **npm** atau **pnpm**
-- Database: **Tidak membutuhkan database** (aplikasi statis client-side).
+- **Node.js**: Version `18.0.0` or higher (`20.x` recommended)
+- **npm** or **pnpm**
+- Database: **No database required** (100% static client-side application).
 
 ### 2. Environment Variables
 
-Tidak ada environment variable khusus yang dibutuhkan.
+No environment variables are required.
 
-### 3. Instalasi & Menjalankan Server Lokal
+### 3. Installation & Running the Local Server
 
 ```bash
-# 1. Clone repository
+# 1. Clone the repository
 git clone https://github.com/widifirmaan/reactjs-airpro-template.git
 cd reactjs-airpro-template
 
-# 2. Install dependensi
+# 2. Install dependencies
 npm install
 
-# 3. Jalankan server development Vite
+# 3. Start Vite development server
 npm run dev
 ```
 
-Buka URL yang ditampilkan pada terminal (biasanya [http://localhost:5173](http://localhost:5173)) di browser Anda.
+Open the local URL displayed in the terminal (usually [http://localhost:5173](http://localhost:5173)) in your browser.
 
-### 4. Panduan Uji Manual (Testing Checklist)
+### 4. Manual Testing Checklist
 
-| No | Fitur | Langkah Pengujian | Hasil yang Diharapkan |
+| No | Feature | Test Steps | Expected Result |
 | :---: | :--- | :--- | :--- |
-| 1 | **Preloader Aset** | Refresh halaman browser | Preloader tampil sejenak hingga aset gambar dan video siap dirender |
-| 2 | **Hero Stage** | Amati tampilan landing page utama | Teks "Magic like you've never heard" tampil jelas di atas video latar |
-| 3 | **Scroll Scrubbing GSAP** | Lakukan scroll ke bawah secara perlahan | Sepasang earbud bergerak memisah dan berotasi secara halus mengikuti timeline scroll |
-| 4 | **Bagian H2 Chip** | Lanjutkan scroll hingga ke section chip audio | Card H2 Chip tampil dengan pencahayaan ambient glow biru |
-| 5 | **Kartu Spesifikasi** | Arahkan kursor (*hover*) ke kartu baterai & Bluetooth | Kartu sedikit terangkat (*translate-y*) dengan efek glassmorphism interaktif |
-| 6 | **Navigasi Mobile** | Perkecil lebar layar browser ke ukuran smartphone, klik menu hamburger | Drawer menu navigasi terbuka mulus dari samping |
+| 1 | **Asset Preloader** | Refresh the browser page | Preloader displays briefly until visual and video assets are ready |
+| 2 | **Hero Stage** | Observe the initial viewport landing | "Magic like you've never heard" text renders cleanly over the background video |
+| 3 | **GSAP Scroll-Scrub** | Scroll down slowly | Left and right earbuds smoothly separate and rotate along the scroll timeline |
+| 4 | **H2 Chip Section** | Scroll to the H2 Chip section | Card renders with blue ambient glow and typography callout |
+| 5 | **Specification Cards** | Hover over battery and Bluetooth cards | Cards lift slightly with interactive glassmorphism hover styles |
+| 6 | **Mobile Navigation** | Resize browser to mobile width, click hamburger menu | Mobile navigation drawer slides open smoothly from the right |
 
 ---
 
