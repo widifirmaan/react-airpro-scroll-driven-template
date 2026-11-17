@@ -14,13 +14,21 @@ AirPro is a responsive React web template designed for hardware product showcase
 
 ## Showcase
 
-| Desktop | Mobile |
+### 1. Hero Presentation & 3D Scroll-Scrub Choreography
+
+| Desktop Interface (MacBook Pro M4) | Mobile Interface (iPhone 16 Pro) |
 | :---: | :---: |
-| **Hero Stage Presentation Desktop**<br>![AirPro Hero Stage Desktop](screenshots/AirPro%20Hero%20Stage%20Desktop.png) | **Hero Stage Presentation Mobile**<br>![AirPro Hero Stage Mobile](screenshots/AirPro%20Hero%20Stage%20Mobile.png) |
-| **Dual Floating Earbuds Scroll Stage Desktop**<br>![AirPro Dual Earbuds Desktop](screenshots/AirPro%20Dual%20Earbuds%20Desktop.png) | **Dual Floating Earbuds Scroll Stage Mobile**<br>![AirPro Dual Earbuds Mobile](screenshots/AirPro%20Dual%20Earbuds%20Mobile.png) |
-| **Active Noise Cancellation Stage Desktop**<br>![AirPro Active Noise Cancellation Desktop](screenshots/AirPro%20Active%20Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation Stage Mobile**<br>![AirPro Active Noise Cancellation Mobile](screenshots/AirPro%20Active%20Noise%20Cancellation%20Mobile.png) |
-| **Personalized Spatial Audio Stage Desktop**<br>![AirPro Spatial Audio Desktop](screenshots/AirPro%20Spatial%20Audio%20Desktop.png) | **Personalized Spatial Audio Stage Mobile**<br>![AirPro Spatial Audio Mobile](screenshots/AirPro%20Spatial%20Audio%20Mobile.png) |
-| **Hardware Specifications Desktop**<br>![AirPro Battery Specs Desktop](screenshots/AirPro%20Battery%20%26%20Specifications%20Desktop.png) | **Hardware Specifications Mobile**<br>![AirPro Battery Specs Mobile](screenshots/AirPro%20Battery%20%26%20Specifications%20Mobile.png) |
+| **Hero Stage Presentation (Ambient Video Layer)**<br>![AirPro Hero Stage Desktop](screenshots/AirPro%20Hero%20Stage%20Desktop.png) | **Hero Stage Presentation (Ambient Video Layer)**<br>![AirPro Hero Stage Mobile](screenshots/AirPro%20Hero%20Stage%20Mobile.png) |
+| **Dual Floating Earbuds Scroll Separation (GSAP 3)**<br>![AirPro Dual Earbuds Separation Desktop](screenshots/AirPro%20Dual%20Earbuds%20Separation%20Desktop.png) | **Dual Floating Earbuds Scroll Separation (GSAP 3)**<br>![AirPro Dual Earbuds Separation Mobile](screenshots/AirPro%20Dual%20Earbuds%20Separation%20Mobile.png) |
+
+### 2. Feature Callouts, Audio Specs & Demonstration
+
+| Desktop Interface (MacBook Pro M4) | Mobile Interface (iPhone 16 Pro) |
+| :---: | :---: |
+| **Active Noise Cancellation Stage**<br>![AirPro Active Noise Cancellation Desktop](screenshots/AirPro%20Active%20Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation Stage**<br>![AirPro Active Noise Cancellation Mobile](screenshots/AirPro%20Active%20Noise%20Cancellation%20Mobile.png) |
+| **Personalized Spatial Audio Stage**<br>![AirPro Personalized Spatial Audio Desktop](screenshots/AirPro%20Personalized%20Spatial%20Audio%20Desktop.png) | **Personalized Spatial Audio Stage**<br>![AirPro Personalized Spatial Audio Mobile](screenshots/AirPro%20Personalized%20Spatial%20Audio%20Mobile.png) |
+| **Hardware Battery & Specifications Cards Grid**<br>![AirPro Battery & Specifications Desktop](screenshots/AirPro%20Battery%20&%20Specifications%20Desktop.png) | **Hardware Battery & Specifications Cards Grid**<br>![AirPro Battery & Specifications Mobile](screenshots/AirPro%20Battery%20&%20Specifications%20Mobile.png) |
+| **Embedded YouTube Product Demonstration Video**<br>![AirPro Video Showcase Desktop](screenshots/AirPro%20Video%20Showcase%20Desktop.png) | **Embedded YouTube Product Demonstration Video**<br>![AirPro Video Showcase Mobile](screenshots/AirPro%20Video%20Showcase%20Mobile.png) |
 
 ---
 
