@@ -4,19 +4,11 @@
 
 AirPro is a responsive React web template designed for hardware product showcases and creative landing pages. Built with React 19, GSAP ScrollTrigger, and Tailwind CSS v4, it synchronizes product visuals with scroll progression—featuring an ambient video hero section, dual earbud perspective transitions, feature callouts (Active Noise Cancellation, Spatial Audio), hardware specification cards, and an embedded demonstration video.
 
-[![Live Demo](https://img.shields.io/badge/Demo-airpro--smooth--react--template.vercel.app-10B981?style=flat-square&logo=vercel&logoColor=white)](https://airpro-smooth-react-template.vercel.app)
 [![React 19](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![GSAP 3](https://img.shields.io/badge/GSAP-3.14.2-88CE02?style=flat-square&logo=greensock&logoColor=white)](https://gsap.com/)
 [![Vite 6](https://img.shields.io/badge/Vite-6.2.0-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS 4](https://img.shields.io/badge/Tailwind-v4.1-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
----
-
-## Live Production
-
-- **URL:** [https://airpro-smooth-react-template.vercel.app](https://airpro-smooth-react-template.vercel.app)
-- **Deployment:** Vercel
 
 ---
 
@@ -70,43 +62,51 @@ AirPro is a responsive React web template designed for hardware product showcase
 │   └── lib/
 │       └── utils.ts     # Classname concatenation helper (cn)
 ├── public/              # Background ambient video and static assets
-├── screenshots/         # MacBook Pro M4 & iPhone 16 Pro showcase mockups
+├── screenshots/         # Showcase mockups
+├── package.json
+├── vite.config.ts
 └── README.md
 ```
 
 ---
 
-## Getting Started & Local Development
+## Local Setup & Deployment
 
-### Prerequisites
+### 1. Prerequisites
 
-- **Node.js**: Version 18.0.0 or higher
+- **Node.js**: Version `18.0.0` or higher (`20.x` recommended)
 - **npm** or **pnpm**
 
-### Installation & Setup
+### 2. Installation & Menjalankan Server Lokal
 
-> **Environment Variables:** No `.env` file or external API keys are required. All scroll timelines, 3D animations, and canvas scrubbing execute 100% locally in the browser.
+Template ini berjalan sepenuhnya di sisi klien tanpa database:
 
 ```bash
-# 1. Clone the repository
+# 1. Clone repository
 git clone https://github.com/widifirmaan/reactjs-airpro-template.git
 cd reactjs-airpro-template
 
 # 2. Install dependencies
 npm install
 
-# 3. Start local development server
+# 3. Jalankan server development Vite
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your web browser.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-### Production Build
+### 3. Panduan Uji Manual (Testing Checklist)
 
-```bash
-# Compile and optimize production distribution bundle
-npm run build
-```
+Lakukan verifikasi manual berikut di browser:
+
+| No | Fitur yang Diuji | Langkah Pengujian | Hasil yang Diharapkan |
+| :---: | :--- | :--- | :--- |
+| 1 | **Asset Preloader** | Refresh halaman `http://localhost:3000` | Preloader tampil hingga seluruh aset video/gambar siap |
+| 2 | **Ambient Video Hero** | Amati area hero utama di landing page | Video latar belakang terputar otomatis dan halus (looping) |
+| 3 | **Scroll Scrubbing GSAP** | Scroll perlahan ke bawah | Sepasang earbud bergerak memisah dan berotasi secara sinkron mengikuti posisi scroll |
+| 4 | **Section Callouts** | Teruskan scroll ke fitur ANC & Spatial Audio | Teks penjelasan muncul bertahap (*fade & slide*) sesuai timeline scrub |
+| 5 | **Kartu Spesifikasi** | Hover pada card spesifikasi baterai dan ketahanan | Efek interaksi hover glassmorphism merespons kursor |
+| 6 | **Demo Video Embed** | Scroll ke bagian video player di bawah, klik play | Pemutar video demonstrasi YouTube dapat diputar lancar |
 
 ---
 
