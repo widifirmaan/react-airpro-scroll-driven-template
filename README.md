@@ -1,4 +1,4 @@
-# AirPro 🎧
+# AirPro
 
 > Responsive hardware product showcase template built with React 19, Tailwind CSS v4, and GSAP ScrollTrigger animation choreography.
 
@@ -25,10 +25,10 @@
 | **Dual Earbuds Separation (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Desktop.png) | **Dual Earbuds Separation (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Mobile.png) |
 | **Active Noise Cancellation Stage**<br>![Noise Cancellation](screenshots/Noise%20Cancellation%20Desktop.png) | **Active Noise Cancellation Stage**<br>![Noise Cancellation](screenshots/Noise%20Cancellation%20Mobile.png) |
 | **Pure Sound & Spatial Audio Stage**<br>![Spatial Audio](screenshots/Spatial%20Audio%20Desktop.png) | **Pure Sound & Spatial Audio Stage**<br>![Spatial Audio](screenshots/Spatial%20Audio%20Mobile.png) |
-| **Final Product Reveal & Floating Earbuds**<br>![Final Reveal](screenshots/Final%20Reveal%20Desktop.png) | **Final Product Reveal & Floating Earbuds**<br>![Final Reveal](screenshots/Final%20Reveal%20Mobile.png) |
 | **H2 Audio Chip Architecture & Performance**<br>![H2 Chip](screenshots/H2%20Chip%20Desktop.png) | **H2 Audio Chip Architecture & Performance**<br>![H2 Chip](screenshots/H2%20Chip%20Mobile.png) |
 | **Hardware Battery & Specifications Grid**<br>![Spesifikasi](screenshots/Spesifikasi%20Desktop.png) | **Hardware Battery & Specifications Grid**<br>![Spesifikasi](screenshots/Spesifikasi%20Mobile.png) |
 | **Product Demonstration Video Showcase**<br>![Video Demo](screenshots/Video%20Demo%20Desktop.png) | **Product Demonstration Video Showcase**<br>![Video Demo](screenshots/Video%20Demo%20Mobile.png) |
+| **Final Product Reveal & Floating Earbuds**<br>![Final Reveal](screenshots/Final%20Reveal%20Desktop.png) | **Final Product Reveal & Floating Earbuds**<br>![Final Reveal](screenshots/Final%20Reveal%20Mobile.png) |
 
 ---
 
