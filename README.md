@@ -1,4 +1,4 @@
-# AirPro
+# AirPro 🎧
 
 > Responsive hardware product showcase template built with React 19, Tailwind CSS v4, and GSAP ScrollTrigger animation choreography.
 
@@ -13,13 +13,14 @@
 
 ## Live URL
 
-- **Production URL**: [https://airpro-smooth-react-template.vercel.app/](https://airpro-smooth-react-template.vercel.app/)
+- **Production URL:** [https://airpro-smooth-react-template.vercel.app/](https://airpro-smooth-react-template.vercel.app/)
+- **Deployment Platform:** Vercel
 
 ---
 
-## Screenshots
+## Showcase
 
-| Desktop | Mobile |
+| Desktop (MacBook Pro M4) | Mobile (iPhone 16 Pro) |
 | :---: | :---: |
 | **Hero Stage Presentation & Ambient Video**<br>![Hero](screenshots/Hero%20Desktop.png) | **Hero Stage Presentation & Ambient Video**<br>![Hero](screenshots/Hero%20Mobile.png) |
 | **Dual Earbuds Separation (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Desktop.png) | **Dual Earbuds Separation (GSAP Scroll-Scrub)**<br>![Earbuds](screenshots/Earbuds%20Mobile.png) |
@@ -32,7 +33,7 @@
 
 ---
 
-## Features
+## Fitur
 
 - **Scroll-Driven GSAP Timeline**: Sticky viewport canvas binding scroll progress directly to a master GSAP timeline (`useGSAP`) with smooth scrub synchronization (`scrub: 2`).
 - **Perspective Earbud Choreography**: Coordinated translation vectors separating left and right audio units along 3D axes accompanied by typographic headline transitions.
@@ -51,7 +52,7 @@
 | Category | Technology | Description / Purpose |
 | :--- | :--- | :--- |
 | **Core Framework** | React `19.0.0`, Vite `6.2.0` | Modern SPA foundation with fast Vite HMR and production bundle optimization |
-| **Scroll & Timeline** | GSAP `3.14.2`, ScrollTrigger, `@gsap/react` `2.1.2` | Hardware-accelerated 3D scroll-scrub timeline and choreography |
+| **Scroll & Motion** | GSAP `3.14.2`, ScrollTrigger, `@gsap/react` `2.1.2`, Motion `12.23.24` | Hardware-accelerated 3D scroll-scrub timeline and choreography |
 | **Styling** | Tailwind CSS `4.1.14` (`@tailwindcss/vite`) | Utility-first styling with modern `@theme` design tokens |
 | **Type System** | TypeScript `5.8.2` | Type-safe components, DOM refs, and GSAP timeline parameters |
 | **Iconography** | Lucide React `0.546.0` | Minimalist line icons for navigation toggles and controls |
@@ -59,47 +60,67 @@
 
 ---
 
-## Local Setup & Deployment
+## Tutorial Run Local & Setup
 
 ### 1. Prerequisites
-
 - **Node.js**: Version `18.0.0` or higher (`20.x` recommended)
 - **npm** or **pnpm**
-- Database: **No database required** (100% static client-side application).
+- Database: **No database required** (100% client-side static application)
 
-### 2. Environment Variables
+### 2. Environment Variables Setup
+No environment variables required for running or building this project.
 
-No environment variables are required.
-
-### 3. Installation & Running the Local Server
-
+### 3. Installation
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/widifirmaan/reactjs-airpro-template.git
 cd reactjs-airpro-template
 
-# 2. Install dependencies
+# Install dependencies
 npm install
-
-# 3. Start Vite development server
-npm run dev
 ```
 
-Open the local URL displayed in the terminal (usually [http://localhost:5173](http://localhost:5173)) in your browser.
+### 4. Running the Local Server
+```bash
+# Start Vite development server
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) (or default Vite port) in your browser.
 
-### 4. Manual Testing Checklist
+### 5. Production Build
+```bash
+npm run build
+```
 
-| No | Feature | Test Steps | Expected Result |
-| :---: | :--- | :--- | :--- |
-| 1 | **Asset Preloader** | Refresh the browser page | Preloader displays briefly until visual and video assets are ready |
-| 2 | **Hero Stage** | Observe the initial viewport landing | "Magic like you've never heard" text renders cleanly over the background video |
-| 3 | **GSAP Scroll-Scrub** | Scroll down slowly | Left and right earbuds smoothly separate and rotate along the scroll timeline |
-| 4 | **H2 Chip Section** | Scroll to the H2 Chip section | Card renders with blue ambient glow and typography callout |
-| 5 | **Specification Cards** | Hover over battery and Bluetooth cards | Cards lift slightly with interactive glassmorphism hover styles |
-| 6 | **Mobile Navigation** | Resize browser to mobile width, click hamburger menu | Mobile navigation drawer slides open smoothly from the right |
+---
+
+## Testing & QA Automation
+
+Automated testing and QA verification are powered by the system's `qa-toolkit`:
+
+### 1. Playwright Test Suite
+End-to-end smoke verification covering stage loads and navbar components:
+
+```bash
+cd /home/widifirmaan/Projects/qa-toolkit
+npx playwright test tests/playwright/airpro.spec.js
+```
+
+### 2. Cypress E2E Verification
+Cross-browser regression testing on DOM structure and production stability:
+
+```bash
+cd /home/widifirmaan/Projects/qa-toolkit
+npx cypress run --spec cypress/e2e/airpro.cy.js
+```
+
+### 3. QA Execution Summary
+- **Playwright**: 2 tests passed (Showcase stage load & Navigation bar inspection)
+- **Cypress**: 1 spec passed (Production URL rendering & DOM mount)
+- **Status**: ✅ All automated tests verified and passing
 
 ---
 
 ## Author
 
-Developed by **[Widi Firmansyah](https://widifirmaan.web.id)**.
+Made with ❤️ by **Widi Firmansyah** / [widifirmaan.web.id](https://widifirmaan.web.id)
