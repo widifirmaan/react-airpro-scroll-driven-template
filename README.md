@@ -18,7 +18,7 @@
 
 ---
 
-## Showcase
+## Screenshots
 
 | Desktop (MacBook Pro M4) | Mobile (iPhone 16 Pro) |
 | :---: | :---: |
