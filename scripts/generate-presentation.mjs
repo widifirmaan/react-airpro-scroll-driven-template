@@ -35,13 +35,13 @@ const imgVideoDesktop = loadBase64Image('Video Demo Desktop.png');
 const imgSpecsDesktop = loadBase64Image('Spesifikasi Desktop.png');
 const imgFinalRevealDesktop = loadBase64Image('Final Reveal Desktop.png');
 
-console.log('🎨 Constructing AirPro luxury Apple-style presentation deck...');
+console.log('🎨 Constructing AirPro Web Architecture & Features presentation deck...');
 
 const htmlContent = `<!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>AirPro Product Showcase Presentation 2026</title>
+<title>AirPro Web Showcase - Presentasi Arsitektur & Fitur Web</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
 
@@ -67,7 +67,7 @@ const htmlContent = `<!DOCTYPE html>
   .slide {
     width: 297mm;
     height: 210mm;
-    padding: 15mm 18mm;
+    padding: 14mm 16mm;
     page-break-after: always;
     position: relative;
     overflow: hidden;
@@ -78,7 +78,7 @@ const htmlContent = `<!DOCTYPE html>
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  /* Subtle background soundwave lines */
+  /* Subtle background grid */
   .soundwave-bg {
     position: absolute;
     inset: 0;
@@ -87,7 +87,7 @@ const htmlContent = `<!DOCTYPE html>
       radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.03) 0%, transparent 40%),
       linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
     pointer-events: none;
     z-index: 1;
   }
@@ -107,9 +107,9 @@ const htmlContent = `<!DOCTYPE html>
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 20px;
-    padding: 20px 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 18px 22px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
 
   /* Pill Badge */
@@ -117,40 +117,37 @@ const htmlContent = `<!DOCTYPE html>
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 16px;
+    padding: 5px 15px;
     border-radius: 9999px;
     background: rgba(56, 189, 248, 0.09);
     border: 1px solid rgba(56, 189, 248, 0.35);
     color: #38bdf8;
     font-size: 10px;
     font-weight: 800;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     width: fit-content;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
   }
 
   .pill-badge.emerald {
     background: rgba(16, 185, 129, 0.09);
     border-color: rgba(16, 185, 129, 0.35);
     color: #34d399;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
   }
 
   .pill-badge.purple {
     background: rgba(168, 85, 247, 0.09);
     border-color: rgba(168, 85, 247, 0.35);
     color: #c084fc;
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
   }
 
   /* Typography */
   .gradient-title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-weight: 900;
     letter-spacing: -0.035em;
-    line-height: 1.05;
-    background: linear-gradient(180deg, #FFFFFF 15%, #94a3b8 100%);
+    line-height: 1.08;
+    background: linear-gradient(180deg, #FFFFFF 20%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -161,26 +158,20 @@ const htmlContent = `<!DOCTYPE html>
     -webkit-text-fill-color: transparent;
   }
 
-  .gradient-emerald {
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   /* Titanium Mockup Frame */
   .mockup-frame {
     background: #000000;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.95), 0 0 30px rgba(56, 189, 248, 0.08);
+    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.95), 0 0 25px rgba(56, 189, 248, 0.06);
     display: flex;
     flex-direction: column;
   }
 
   .traffic-header {
     background: #0e1117;
-    padding: 7px 14px;
+    padding: 6px 12px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -196,17 +187,17 @@ const htmlContent = `<!DOCTYPE html>
   .dot-yellow { background: #f59e0b; }
   .dot-green { background: #10b981; }
   .browser-url {
-    margin-left: 10px;
+    margin-left: 8px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5px;
+    font-size: 9px;
     color: #64748b;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
   }
 
   .mockup-img {
     width: 100%;
     height: auto;
-    max-height: 125mm;
+    max-height: 122mm;
     display: block;
     object-fit: contain;
     background: #000;
@@ -215,7 +206,7 @@ const htmlContent = `<!DOCTYPE html>
   /* Page Number */
   .page-num {
     position: absolute;
-    bottom: 12mm;
+    bottom: 11mm;
     right: 14mm;
     background: rgba(255, 255, 255, 0.035);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -233,11 +224,11 @@ const htmlContent = `<!DOCTYPE html>
   .split-layout {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    gap: 28px;
+    gap: 26px;
     align-items: center;
     height: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .split-layout.reverse {
@@ -248,13 +239,13 @@ const htmlContent = `<!DOCTYPE html>
   .feature-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 8px;
   }
 
   .feature-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 6px;
     background: rgba(56, 189, 248, 0.12);
     border: 1px solid rgba(56, 189, 248, 0.3);
@@ -262,64 +253,22 @@ const htmlContent = `<!DOCTYPE html>
     align-items: center;
     justify-content: center;
     color: #38bdf8;
-    font-size: 11px;
+    font-size: 10.5px;
     font-weight: 900;
     flex-shrink: 0;
   }
 
   .feature-text h4 {
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 700;
     color: #f8fafc;
     margin-bottom: 2px;
   }
 
   .feature-text p {
-    font-size: 10.5px;
+    font-size: 10px;
     color: #94a3b8;
-    line-height: 1.45;
-  }
-
-  /* Metrics Grid */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    width: 100%;
-  }
-
-  .metric-card {
-    background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 16px;
-    padding: 14px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .metric-value {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #38bdf8;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .metric-label {
-    font-size: 10.5px;
-    font-weight: 800;
-    color: #e2e8f0;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .metric-desc {
-    font-size: 9.5px;
-    color: #94a3b8;
-    margin-top: 4px;
-    line-height: 1.35;
+    line-height: 1.4;
   }
 
   /* Dual phone mockups */
@@ -327,15 +276,15 @@ const htmlContent = `<!DOCTYPE html>
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
   }
 
   .phone-mockup {
-    width: 145px;
-    border-radius: 24px;
+    width: 140px;
+    border-radius: 22px;
     background: #000;
-    border: 3px solid #1e293b;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(56, 189, 248, 0.1);
+    border: 2px solid #1e293b;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(56, 189, 248, 0.08);
     overflow: hidden;
   }
 
@@ -356,37 +305,41 @@ const htmlContent = `<!DOCTYPE html>
 <body>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 01: COVER HERO -->
+  <!-- SLIDE 01: COVER -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content" style="justify-content: center; align-items: center; text-align: center;">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 850px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 860px;">
         <div class="pill-badge">
-          <span>●</span> 2026 HARDWARE &amp; EXPERIENCE SHOWCASE
+          <span>●</span> WEB APPLICATION SHOWCASE · 2026
         </div>
-        <h1 class="gradient-title" style="font-size: 4.8rem; line-height: 0.98;">
-          AIRPRO <span class="gradient-cyan">STUDIO</span>
+        <h1 class="gradient-title" style="font-size: 4.2rem; line-height: 1;">
+          REACTJS AIRPRO <span class="gradient-cyan">TEMPLATE</span>
         </h1>
-        <div class="glass-card" style="padding: 14px 28px; margin-top: 10px;">
-          <p style="font-size: 15px; font-weight: 600; color: #cbd5e1; letter-spacing: 0.02em;">
-            High-Fidelity Wireless Audio &amp; 3000vh GSAP Scroll Choreography
+        <div class="glass-card" style="padding: 12px 28px; margin-top: 6px;">
+          <p style="font-size: 14px; font-weight: 600; color: #cbd5e1; letter-spacing: 0.02em;">
+            Template Web Showcase Interaktif Berbasis React 19 &amp; GSAP ScrollTrigger
           </p>
         </div>
         
-        <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; justify-content: center;">
-          <span style="font-size: 10px; font-weight: 700; color: #94a3b8; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 9999px;">Vite 6</span>
+        <p style="font-size: 12px; color: #94a3b8; max-width: 680px; line-height: 1.6; margin-top: 6px;">
+          Arsitektur frontend modern yang mengintegrasikan animasi scroll sepanjang 3000vh, navigasi melayang bergaya liquid glass, drawer menu mobile adaptif, dan optimasi performa 60fps tanpa lagging.
+        </p>
+
+        <div style="display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; justify-content: center;">
           <span style="font-size: 10px; font-weight: 700; color: #94a3b8; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 9999px;">React 19</span>
+          <span style="font-size: 10px; font-weight: 700; color: #94a3b8; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 9999px;">Vite 6</span>
           <span style="font-size: 10px; font-weight: 700; color: #94a3b8; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 9999px;">GSAP ScrollTrigger</span>
           <span style="font-size: 10px; font-weight: 700; color: #94a3b8; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 9999px;">Tailwind CSS v4</span>
           <span style="font-size: 10px; font-weight: 700; color: #94a3b8; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 5px 12px; border-radius: 9999px;">TypeScript</span>
         </div>
 
-        <div style="margin-top: 35px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; width: 100%;">
-          <p style="font-size: 12px; font-weight: 800; color: #f8fafc; letter-spacing: 0.1em; text-transform: uppercase;">
-            WIDI FIRMAAN <span style="color: #64748b; font-weight: 400;">|</span> LEAD CREATIVE ARCHITECT
+        <div style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; width: 100%;">
+          <p style="font-size: 11px; font-weight: 800; color: #f8fafc; letter-spacing: 0.1em; text-transform: uppercase;">
+            WIDI FIRMAAN <span style="color: #64748b; font-weight: 400;">|</span> LEAD FRONTEND DEVELOPER
           </p>
-          <p style="font-size: 10px; color: #64748b; margin-top: 3px;">AirPro Interactive Hardware Template · Engineered for Pure Performance</p>
+          <p style="font-size: 9.5px; color: #64748b; margin-top: 2px;">Dokumentasi &amp; Presentasi Teknis Aplikasi Web</p>
         </div>
       </div>
     </div>
@@ -394,46 +347,46 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 02: HERO STAGE & FIRST IMPRESSION -->
+  <!-- SLIDE 02: FITUR WEB - PRELOADER LIFECYCLE -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content">
       <div class="split-layout">
-        <!-- Left: Text & Features -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- Left: Text -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div class="pill-badge">
-            <span>01</span> FIRST IMPRESSION
+            <span>01</span> FITUR WEB: PRELOADER LIFECYCLE
           </div>
           <h2 class="gradient-title">
-            Magic Like You've Never Heard.
+            Preloader &amp; Asset State Management
           </h2>
           <div class="glass-card">
-            <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
-              Sebuah pengalaman pendaratan imersif yang dirancang dengan transisi preloader halus, navigation bar bergaya liquid glass transparan, dan tipografi sinematik beresolusi tinggi yang memperkenalkan era baru perangkat audio nirkabel.
+            <p style="font-size: 11.5px; line-height: 1.6; color: #cbd5e1;">
+              Sistem manajemen siklus pemuatan aplikasi web berbasis state React (<code style="color: #38bdf8; font-family: monospace;">showPreloader</code> &amp; <code style="color: #38bdf8; font-family: monospace;">isLoaded</code>) yang memvalidasi kesiapan dokumen HTML dan aset visual sebelum membuka akses interaktif bagi pengguna.
             </p>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
             <div class="feature-item">
               <div class="feature-icon">✓</div>
               <div class="feature-text">
-                <h4>Liquid Glass Floating Navbar</h4>
-                <p>Navigasi mengambang dengan efek backdrop-blur dinamis dan border transparan responsif.</p>
+                <h4>Event Listener Window Onload</h4>
+                <p>Memeriksa <code style="color:#cbd5e1">document.readyState === 'complete'</code> untuk mencegah FOUC (Flash of Unstyled Content).</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">✓</div>
               <div class="feature-text">
-                <h4>Seamless Preloader Dismissal</h4>
-                <p>Transisi fade-out dan scale-up instan saat aset 3D siap dirender di kanvas pengguna.</p>
+                <h4>Transisi CSS Halus (1000ms)</h4>
+                <p>Animasi penutupan bertahap dengan kombinasi class <code style="color:#cbd5e1">opacity-0</code>, <code style="color:#cbd5e1">scale-110</code>, dan <code style="color:#cbd5e1">blur-sm</code>.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">✓</div>
               <div class="feature-text">
-                <h4>Fluid Typography Scale</h4>
-                <p>Skalabilitas ukuran teks adaptif otomatis tanpa menyebabkan layout shift pada viewport desktop.</p>
+                <h4>Pembersihan Memori DOM</h4>
+                <p>Menghapus container preloader dari tree DOM setelah transisi animasi selesai menggunakan setTimeout.</p>
               </div>
             </div>
           </div>
@@ -447,7 +400,7 @@ const htmlContent = `<!DOCTYPE html>
             <div class="traffic-dot dot-green"></div>
             <span class="browser-url">https://airpro.widifirmaan.web.id/</span>
           </div>
-          <img class="mockup-img" src="${imgHeroDesktop}" alt="Hero Stage Desktop" />
+          <img class="mockup-img" src="${imgHeroDesktop}" alt="Hero Stage Web Desktop" />
         </div>
       </div>
     </div>
@@ -455,7 +408,7 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 03: 3D DUAL EARBUDS CHOREOGRAPHY -->
+  <!-- SLIDE 03: FITUR WEB - LIQUID GLASS NAVBAR -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
@@ -467,45 +420,45 @@ const htmlContent = `<!DOCTYPE html>
             <div class="traffic-dot dot-red"></div>
             <div class="traffic-dot dot-yellow"></div>
             <div class="traffic-dot dot-green"></div>
-            <span class="browser-url">https://airpro.widifirmaan.web.id/#earbuds</span>
+            <span class="browser-url">https://airpro.widifirmaan.web.id/#navigation</span>
           </div>
-          <img class="mockup-img" src="${imgEarbudsDesktop}" alt="Earbuds 3D Choreography" />
+          <img class="mockup-img" src="${imgEarbudsDesktop}" alt="Floating Navbar Web Showcase" />
         </div>
 
-        <!-- Right: Text & Features -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- Right: Text -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div class="pill-badge">
-            <span>02</span> HARDWARE CHOREOGRAPHY
+            <span>02</span> FITUR WEB: FLOATING NAVBAR
           </div>
           <h2 class="gradient-title">
-            Architected for Total Immersion.
+            Liquid Glass Navigation Bar
           </h2>
           <div class="glass-card">
-            <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
-              Visualisasi 3D mendalam dengan timeline GSAP ScrollTrigger sepanjang 3000vh. Saat pengguna melakukan scroll, komponen earbuds kanan dan kiri bergerak, terurai, dan menyatu kembali dalam koordinat 3 dimensi dengan kehalusan 60fps.
+            <p style="font-size: 11.5px; line-height: 1.6; color: #cbd5e1;">
+              Komponen navigasi melayang (*floating navbar*) dengan posisi tetap (<code style="color: #38bdf8; font-family: monospace;">position: fixed</code>) yang mengadopsi prinsip desain liquid glass modern, memberikan akses navigasi cepat tanpa menghalangi visual konten utama.
             </p>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
             <div class="feature-item">
-              <div class="feature-icon">⚡</div>
+              <div class="feature-icon">✦</div>
               <div class="feature-text">
-                <h4>3000vh Scrub Timeline Scrubbing</h4>
-                <p>Interpolasi posisi akurat yang terikat langsung pada posisi scroll pengguna secara deterministik.</p>
+                <h4>Backdrop Filter Blur (24px)</h4>
+                <p>Mengaburkan konten latar belakang secara real-time saat pengguna menggulir halaman ke bawah.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">⚡</div>
+              <div class="feature-icon">✦</div>
               <div class="feature-text">
-                <h4>Dual Independent Rotation Matrices</h4>
-                <p>Sumbu rotasi X, Y, dan Z terpisah untuk setiap earbud guna mensimulasikan gerak floating nyata.</p>
+                <h4>Animasi Link Hover Underline</h4>
+                <p>Garis bawah dinamis dengan pseudo-element <code style="color:#cbd5e1">::after</code> yang melebar dari tengah (<code style="color:#cbd5e1">w-1/2</code>) saat di-hover.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">⚡</div>
+              <div class="feature-icon">✦</div>
               <div class="feature-text">
-                <h4>Hardware Acceleration</h4>
-                <p>Menggunakan translate3d dan will-change untuk meminimalkan beban CPU dan konsumsi baterai.</p>
+                <h4>Tombol CTA dengan Efek Tekan</h4>
+                <p>Tombol interaktif dengan efek bayangan biru dan umpan balik sentuhan <code style="color:#cbd5e1">active:scale-95</code>.</p>
               </div>
             </div>
           </div>
@@ -516,46 +469,46 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 04: SILICON INNOVATION - H2 CHIP -->
+  <!-- SLIDE 04: FITUR WEB - GSAP 3000vh SCROLL SYSTEM -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content">
       <div class="split-layout">
         <!-- Left: Text -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div class="pill-badge emerald">
-            <span>03</span> SILICON INNOVATION
+            <span>03</span> FITUR WEB: GSAP SCROLL SYSTEM
           </div>
           <h2 class="gradient-title">
-            The Brains Behind the Sound.
+            Interactive 3000vh Scroll Scrubbing
           </h2>
           <div class="glass-card">
-            <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
-              Didukung oleh arsitektur silicon H2 rancangan kustom yang menjalankan algoritma komputasi audio mutakhir secara real-time. Memproses dan menyaring sinyal frekuensi 48.000 kali per detik untuk menghasilkan kejernihan suara akustik tanpa kompromi.
+            <p style="font-size: 11.5px; line-height: 1.6; color: #cbd5e1;">
+              Inti dari interaktivitas web ini adalah arsitektur animasi berbasis GSAP ScrollTrigger sepanjang timeline virtual <code style="color: #34d399; font-family: monospace;">end: "+=3000%"</code> dengan parameter <code style="color: #34d399; font-family: monospace;">scrub: 2</code> yang mengikat transformasi elemen secara langsung pada pergerakan scroll pengguna.
             </p>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
             <div class="feature-item">
-              <div class="feature-icon" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">⚙</div>
+              <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">⚡</div>
               <div class="feature-text">
-                <h4>48,000 Cycles / Second</h4>
-                <p>Pemrosesan komputasi audio instan untuk adaptasi akustik di setiap jenis musik dan lingkungan bising.</p>
+                <h4>Isolasi Lifecycle dengan useGSAP Hook</h4>
+                <p>Menghubungkan timeline animasi ke <code style="color:#cbd5e1">rootRef</code> React untuk mencegah kebocoran memori saat unmount.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">⚙</div>
+              <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">⚡</div>
               <div class="feature-text">
-                <h4>Low-Distortion Custom Audio Driver</h4>
-                <p>Reproduksi bass yang dalam dan treble yang jernih dengan kontrol distorsi minimal.</p>
+                <h4>Transformasi Koordinat 3 Sumbu (X, Y, Rotate)</h4>
+                <p>Sinkronisasi perpindahan posisi, rotasi sudut, dan skala pembesaran elemen visual secara deterministik.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">⚙</div>
+              <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: #34d399;">⚡</div>
               <div class="feature-text">
-                <h4>Ultra-Low Power DSP</h4>
-                <p>Optimalisasi efisiensi daya baterai untuk daya tahan mendengarkan lebih lama.</p>
+                <h4>Inisialisasi Aman dengan ScrollTrigger.refresh()</h4>
+                <p>Menghitung ulang posisi trigger secara otomatis setelah seluruh elemen layout selesai dimuat.</p>
               </div>
             </div>
           </div>
@@ -567,9 +520,9 @@ const htmlContent = `<!DOCTYPE html>
             <div class="traffic-dot dot-red"></div>
             <div class="traffic-dot dot-yellow"></div>
             <div class="traffic-dot dot-green"></div>
-            <span class="browser-url">https://airpro.widifirmaan.web.id/#h2-chip</span>
+            <span class="browser-url">https://airpro.widifirmaan.web.id/#timeline-scrub</span>
           </div>
-          <img class="mockup-img" src="${imgH2ChipDesktop}" alt="H2 Chip Silicon Architecture" />
+          <img class="mockup-img" src="${imgEarbudsDesktop}" alt="GSAP Timeline Scrubbing Demo" />
         </div>
       </div>
     </div>
@@ -577,7 +530,7 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 05: ACTIVE NOISE CANCELLATION -->
+  <!-- SLIDE 05: FITUR WEB - BREAKPOINT LOGIC -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
@@ -589,45 +542,45 @@ const htmlContent = `<!DOCTYPE html>
             <div class="traffic-dot dot-red"></div>
             <div class="traffic-dot dot-yellow"></div>
             <div class="traffic-dot dot-green"></div>
-            <span class="browser-url">https://airpro.widifirmaan.web.id/#noise-cancellation</span>
+            <span class="browser-url">https://airpro.widifirmaan.web.id/#responsive-logic</span>
           </div>
-          <img class="mockup-img" src="${imgNoiseDesktop}" alt="Active Noise Cancellation" />
+          <img class="mockup-img" src="${imgNoiseDesktop}" alt="Responsive Viewport Breakpoint Logic" />
         </div>
 
         <!-- Right: Text -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div class="pill-badge">
-            <span>04</span> ACOUSTIC ISOLATION
+            <span>04</span> FITUR WEB: VIEWPORT ADAPTATION
           </div>
           <h2 class="gradient-title">
-            Up to 2x More Noise Cancellation.
+            Dynamic Viewport Calculations
           </h2>
           <div class="glass-card">
-            <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
-              Mikrofon peredam bising eksternal dan ventilasi akustik belakang diposisikan secara strategis untuk mendeteksi gelombang suara luar, kemudian menetralkannya secara instan dengan gelombang anti-bising sebelum mencapai gendang telinga.
+            <p style="font-size: 11.5px; line-height: 1.6; color: #cbd5e1;">
+              Skrip aplikasi web secara cerdas mendeteksi lebar jendela browser (<code style="color: #38bdf8; font-family: monospace;">window.innerWidth &lt; 768</code>) untuk secara dinamis mengkalkulasi jarak pergeseran animasi dan skala komponen agar tidak menabrak teks pada layar kecil.
             </p>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
             <div class="feature-item">
-              <div class="feature-icon">🛡️</div>
+              <div class="feature-icon">📐</div>
               <div class="feature-text">
-                <h4>Dual Beamforming Microphones</h4>
-                <p>Memfokuskan tangkapan suara vokal sekaligus meredam kebisingan latar belakang dan angin.</p>
+                <h4>Variabel Pergeseran splitX Dinamis</h4>
+                <p>Menggunakan nilai <code style="color:#cbd5e1">30%</code> pada mobile dan <code style="color:#cbd5e1">100%</code> pada desktop untuk menjaga komposisi visual.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">🛡️</div>
+              <div class="feature-icon">📐</div>
               <div class="feature-text">
-                <h4>Adaptive Transparency Mode</h4>
-                <p>Memungkinkan suara sekitar tetap terdengar natural saat Anda berinteraksi dengan lingkungan luar.</p>
+                <h4>Kompensasi Skala featureScale</h4>
+                <p>Menurunkan skala elemen menjadi 0.5x pada mobile (vs 0.8x desktop) agar konten teks tetap terbaca jelas.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon">🛡️</div>
+              <div class="feature-icon">📐</div>
               <div class="feature-text">
-                <h4>Acoustic Vent Equalization</h4>
-                <p>Menyeimbangkan tekanan udara di dalam telinga untuk kenyamanan pemakaian jangka panjang.</p>
+                <h4>Vertical Centering (y: -4vh)</h4>
+                <p>Menyesuaikan titik tumpu vertikal elemen agar berada tepat di atas blok deskripsi pada perangkat smartphone.</p>
               </div>
             </div>
           </div>
@@ -638,46 +591,46 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 06: PERSONALIZED SPATIAL AUDIO -->
+  <!-- SLIDE 06: FITUR WEB - CONTENT SEQUENCING -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content">
       <div class="split-layout">
         <!-- Left: Text -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div class="pill-badge purple">
-            <span>05</span> DYNAMIC HEAD TRACKING
+            <span>05</span> FITUR WEB: CONTENT SEQUENCING
           </div>
           <h2 class="gradient-title">
-            Sound Tuned to Your Anatomy.
+            Multi-Stage Content Sequencing
           </h2>
           <div class="glass-card">
-            <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
-              Teknologi Personalized Spatial Audio bekerja selaras dengan sensor giroskop dan akselerometer untuk melacak pergerakan kepala secara dinamis. Menempatkan instrumen dan vokal dalam ruang tiga dimensi yang stabil layaknya di panggung teater.
+            <p style="font-size: 11.5px; line-height: 1.6; color: #cbd5e1;">
+              Sistem pengaturan timeline konten yang mengatur pergantian teks presentasi (<code style="color: #c084fc; font-family: monospace;">feature-1</code> ke <code style="color: #c084fc; font-family: monospace;">feature-2</code>) secara berurutan dengan jeda baca (*hold duration*) terukur saat pengguna melakukan scroll.
             </p>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
             <div class="feature-item">
-              <div class="feature-icon" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.35); color: #c084fc;">🎧</div>
+              <div class="feature-icon" style="background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.3); color: #c084fc;">⏱️</div>
               <div class="feature-text">
-                <h4>Dynamic Head Tracking</h4>
-                <p>Suara tetap terkunci di ruang virtual terlepas dari ke mana kepala Anda menoleh.</p>
+                <h4>Pemberian Jeda Baca (.to({}, { duration: 5 }))</h4>
+                <p>Menghentikan pergeseran sementara saat scroll agar pengguna dapat membaca penjelasan fitur dengan nyaman.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.35); color: #c084fc;">🎧</div>
+              <div class="feature-icon" style="background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.3); color: #c084fc;">⏱️</div>
               <div class="feature-text">
-                <h4>Custom Ear Canal Profiling</h4>
-                <p>Penyetelan frekuensi audio yang disesuaikan dengan geometri unik telinga setiap pengguna.</p>
+                <h4>Cross-Fade Transition Antar Tahapan</h4>
+                <p>Animasi memudar keluar (-=3s) dari seksi pertama yang bertumpang tindih secara mulus dengan masuknya seksi berikutnya.</p>
               </div>
             </div>
             <div class="feature-item">
-              <div class="feature-icon" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.35); color: #c084fc;">🎧</div>
+              <div class="feature-icon" style="background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.3); color: #c084fc;">⏱️</div>
               <div class="feature-text">
-                <h4>Binaural Spatial Rendering</h4>
-                <p>Reproduksi audio 360 derajat sinematik untuk film, gaming, dan rekaman audio spasial.</p>
+                <h4>Smooth Zoom-Out Menuju Teks Akhir</h4>
+                <p>Elemen visual membesar hingga 3x skala lalu memudar saat teks kesimpulan akhir diungkap.</p>
               </div>
             </div>
           </div>
@@ -689,9 +642,9 @@ const htmlContent = `<!DOCTYPE html>
             <div class="traffic-dot dot-red"></div>
             <div class="traffic-dot dot-yellow"></div>
             <div class="traffic-dot dot-green"></div>
-            <span class="browser-url">https://airpro.widifirmaan.web.id/#spatial-audio</span>
+            <span class="browser-url">https://airpro.widifirmaan.web.id/#content-sequencing</span>
           </div>
-          <img class="mockup-img" src="${imgSpatialDesktop}" alt="Personalized Spatial Audio" />
+          <img class="mockup-img" src="${imgSpatialDesktop}" alt="Content Sequencing Showcase" />
         </div>
       </div>
     </div>
@@ -699,56 +652,56 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 07: RESPONSIVE MOBILE EXPERIENCE -->
+  <!-- SLIDE 07: FITUR WEB - MOBILE DRAWER & TOUCH -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content">
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px;">
         <div class="pill-badge">
-          <span>06</span> CROSS-DEVICE EXCELLENCE
+          <span>06</span> FITUR WEB: MOBILE UX &amp; TOUCH
         </div>
-        <h2 class="gradient-title" style="font-size: 2.3rem;">
-          Flawless Across Every Screen Size.
+        <h2 class="gradient-title" style="font-size: 2.2rem;">
+          Mobile Drawer &amp; Scroll Lock Management
         </h2>
-        <p style="font-size: 12px; color: #94a3b8; max-width: 650px;">
-          Dioptimalkan secara presisi untuk perangkat mobile dengan touch target ramah jemari, drawer navigasi liquid glass, dan performa scroll 60fps tanpa lagging.
+        <p style="font-size: 11.5px; color: #94a3b8; max-width: 650px;">
+          Pengalaman navigasi mobile native dengan kontrol menu drawer transparan, animasi staggered menu links, dan manajemen overflow scroll dokumen secara dinamis.
         </p>
       </div>
 
-      <div style="display: flex; align-items: center; justify-content: center; gap: 40px; margin: 15px 0;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 36px; margin: 12px 0;">
         <!-- Dual Phone Mockups -->
         <div class="dual-phone-container">
           <div class="phone-mockup tilt-left">
-            <img src="${imgHeroMobile}" alt="Mobile Landing" />
+            <img src="${imgHeroMobile}" alt="Tampilan Mobile Landing" />
           </div>
           <div class="phone-mockup tilt-right">
-            <img src="${imgNoiseMobile}" alt="Mobile Noise Cancellation" />
+            <img src="${imgNoiseMobile}" alt="Tampilan Mobile Section" />
           </div>
         </div>
 
         <!-- Right Detail Card -->
-        <div class="glass-card" style="max-width: 360px; display: flex; flex-direction: column; gap: 12px;">
-          <h3 style="font-size: 15px; font-weight: 800; color: #ffffff;">Mobile First Invariants:</h3>
+        <div class="glass-card" style="max-width: 380px; display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="font-size: 13.5px; font-weight: 800; color: #ffffff;">Prinsip Implementasi Mobile Web:</h3>
           <div class="feature-item">
-            <div class="feature-icon">📱</div>
+            <div class="feature-icon">🔒</div>
             <div class="feature-text">
-              <h4>Zero Horizontal Overflow</h4>
-              <p>Viewport terjaga presisi pada iPhone 16 Pro (393x852) tanpa pergeseran sumbu horizontal.</p>
+              <h4>Scroll Lock (<code style="font-size:9.5px">document.body.style.overflow</code>)</h4>
+              <p>Mencegah scroll halaman saat drawer menu terbuka dengan menyetel properti ke <code style="color:#cbd5e1">'hidden'</code>.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✨</div>
+            <div class="feature-text">
+              <h4>Staggered Delay Menu Links</h4>
+              <p>Tautan menu muncul satu per satu dengan penundaan otomatis: <code style="color:#cbd5e1">transitionDelay: (i + 1) * 100ms</code>.</p>
             </div>
           </div>
           <div class="feature-item">
             <div class="feature-icon">📱</div>
             <div class="feature-text">
-              <h4>Touch Target &gt;= 44px</h4>
-              <p>Semua tombol CTA dan hamburger menu memenuhi standar aksesibilitas WCAG AA.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">📱</div>
-            <div class="feature-text">
-              <h4>Mobile GSAP Performance</h4>
-              <p>Dukungan scroll touch native dengan pinning optimal tanpa loncatan visual (zero-jank).</p>
+              <h4>Zero Horizontal Scroll Invariant</h4>
+              <p>Memastikan lebar konten tidak melebihi lebar viewport iPhone 16 Pro (393px) untuk mencegah pergeseran layar.</p>
             </div>
           </div>
         </div>
@@ -758,46 +711,46 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 08: INTERACTIVE CINEMATIC VIDEO DEMO -->
+  <!-- SLIDE 08: FITUR WEB - EMBEDDED MEDIA -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content">
       <div class="split-layout">
         <!-- Left: Text -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div class="pill-badge">
-            <span>07</span> MEDIA DEMONSTRATION
+            <span>07</span> FITUR WEB: EMBEDDED MEDIA
           </div>
           <h2 class="gradient-title">
-            Experience the Sound in Motion.
+            Responsive Video Showcase Container
           </h2>
           <div class="glass-card">
-            <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
-              Seksi demonstrasi multimedia terintegrasi dengan pemutar video beresolusi tinggi, kontrol interaktif, rasio aspek sinematik 16:9, dan mode backdrop gelap untuk presentasi audio visual penuh.
+            <p style="font-size: 11.5px; line-height: 1.6; color: #cbd5e1;">
+              Integrasi seksi pemutar video responsif dengan rasio aspek 16:9 yang diletakkan di luar container scroll pinning untuk memberikan pengalaman transisi alur web yang alami bagi pengunjung.
             </p>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+          <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
             <div class="feature-item">
               <div class="feature-icon">▶</div>
               <div class="feature-text">
-                <h4>Cinematic 16:9 Video Container</h4>
-                <p>Framing presisi dengan rasio standar industri video untuk pemutaran tanpa distorsi piksel.</p>
+                <h4>Fluid Aspect-Ratio Preservation</h4>
+                <p>Menggunakan teknik pembungkus rasio aspek fleksibel agar tampilan video tidak terpotong pada berbagai resolusi monitor.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">▶</div>
               <div class="feature-text">
-                <h4>Theater Mode Ambient Backdrop</h4>
-                <p>Pencahayaan latar belakang gelap yang menyerap fokus pengguna langsung ke konten media.</p>
+                <h4>Theater-Mode Dark Styling</h4>
+                <p>Pencahayaan latar belakang gelap murni (<code style="color:#cbd5e1">#000000</code>) yang menonjolkan konten video visual secara maksimal.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">▶</div>
               <div class="feature-text">
-                <h4>Accessible Media Controls</h4>
-                <p>Mendukung navigasi keyboard, gesture sentuh, dan kontrol volume terintegrasi.</p>
+                <h4>Lazy Loading Media Iframe</h4>
+                <p>Pemuatan deferred untuk memastikan aset skrip utama selesai diunduh tanpa tertahan oleh koneksi media eksternal.</p>
               </div>
             </div>
           </div>
@@ -811,7 +764,7 @@ const htmlContent = `<!DOCTYPE html>
             <div class="traffic-dot dot-green"></div>
             <span class="browser-url">https://airpro.widifirmaan.web.id/#video-demo</span>
           </div>
-          <img class="mockup-img" src="${imgVideoDesktop}" alt="Cinematic Video Demo" />
+          <img class="mockup-img" src="${imgVideoDesktop}" alt="Responsive Video Container Web Feature" />
         </div>
       </div>
     </div>
@@ -819,49 +772,41 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 09: TECHNICAL SPECIFICATIONS & METRICS -->
+  <!-- SLIDE 09: FITUR WEB - SPECIFICATIONS GRID -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content">
-      <div style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="display: flex; flex-direction: column; gap: 4px;">
         <div class="pill-badge emerald">
-          <span>08</span> HARDWARE BENCHMARKS
+          <span>08</span> FITUR WEB: DATA VISUALIZATION
         </div>
-        <h2 class="gradient-title" style="font-size: 2.2rem;">
-          Pro Performance in Every Dimension.
+        <h2 class="gradient-title" style="font-size: 2.1rem;">
+          Staggered Specification Cards Layout
         </h2>
       </div>
 
-      <!-- 4 Metrics Row -->
-      <div class="metrics-grid" style="margin: 12px 0;">
-        <div class="metric-card">
-          <div>
-            <div class="metric-value">6.0 hrs</div>
-            <div class="metric-label">Listening Time</div>
-          </div>
-          <p class="metric-desc">Hingga 6 jam pemutaran audio dengan ANC aktif (30 jam dengan MagSafe Case).</p>
+      <!-- 4 Code & Feature Cards -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 10px 0;">
+        <div class="glass-card" style="padding: 12px 14px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #38bdf8;">Grid Layout</div>
+          <div style="font-size: 10px; font-weight: 800; color: #f1f5f9; text-transform: uppercase; margin-top: 2px;">CSS Grid 4-Column</div>
+          <p style="font-size: 9.5px; color: #94a3b8; margin-top: 4px; line-height: 1.4;">Tata letak kartu modular yang melipat menjadi 1-2 kolom secara otomatis pada layar smartphone.</p>
         </div>
-        <div class="metric-card">
-          <div>
-            <div class="metric-value" style="color: #34d399;">48,000 /s</div>
-            <div class="metric-label">Acoustic Tuning</div>
-          </div>
-          <p class="metric-desc">Siklus komputasi per detik dari chipset H2 untuk penyesuaian akustik adaptif.</p>
+        <div class="glass-card" style="padding: 12px 14px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #34d399;">ScrollTrigger</div>
+          <div style="font-size: 10px; font-weight: 800; color: #f1f5f9; text-transform: uppercase; margin-top: 2px;">Start: "top 70%"</div>
+          <p style="font-size: 9.5px; color: #94a3b8; margin-top: 4px; line-height: 1.4;">Memicu animasi kemunculan elemen saat seksi mencapai 70% tinggi jendela browser pengguna.</p>
         </div>
-        <div class="metric-card">
-          <div>
-            <div class="metric-value" style="color: #c084fc;">IP54</div>
-            <div class="metric-label">Dust &amp; Water Resistant</div>
-          </div>
-          <p class="metric-desc">Sertifikasi ketahanan debu, keringat, dan cipratan air untuk aktivitas luar ruangan.</p>
+        <div class="glass-card" style="padding: 12px 14px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #c084fc;">Stagger 0.15s</div>
+          <div style="font-size: 10px; font-weight: 800; color: #f1f5f9; text-transform: uppercase; margin-top: 2px;">Sequential Entrance</div>
+          <p style="font-size: 9.5px; color: #94a3b8; margin-top: 4px; line-height: 1.4;">Jeda berurutan 150ms antar kartu untuk efek kemunculan visual yang teratur dan rapi.</p>
         </div>
-        <div class="metric-card">
-          <div>
-            <div class="metric-value" style="color: #f59e0b;">BT 5.3</div>
-            <div class="metric-label">Wireless Protocol</div>
-          </div>
-          <p class="metric-desc">Koneksi nirkabel ultra-low latency dengan dukungan LE Audio generasi terbaru.</p>
+        <div class="glass-card" style="padding: 12px 14px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #f59e0b;">Easing Kurva</div>
+          <div style="font-size: 10px; font-weight: 800; color: #f1f5f9; text-transform: uppercase; margin-top: 2px;">ease: "power3.out"</div>
+          <p style="font-size: 9.5px; color: #94a3b8; margin-top: 4px; line-height: 1.4;">Kurva deselerasi kubik alami yang menghentikan pergerakan kartu secara perlahan dan halus.</p>
         </div>
       </div>
 
@@ -871,7 +816,7 @@ const htmlContent = `<!DOCTYPE html>
           <div class="traffic-dot dot-red"></div>
           <div class="traffic-dot dot-yellow"></div>
           <div class="traffic-dot dot-green"></div>
-          <span class="browser-url">https://airpro.widifirmaan.web.id/#specifications</span>
+          <span class="browser-url">https://airpro.widifirmaan.web.id/#specifications-grid</span>
         </div>
         <img class="mockup-img" src="${imgSpecsDesktop}" alt="Technical Specifications Sheet" style="max-height: 72mm; object-fit: cover;" />
       </div>
@@ -880,69 +825,69 @@ const htmlContent = `<!DOCTYPE html>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- SLIDE 10: MODERN TECHNOLOGY & GRAND CLOSING -->
+  <!-- SLIDE 10: ARSITEKTUR TEKNOLOGI & RINGKASAN -->
   <!-- ========================================================================= -->
   <section class="slide">
     <div class="soundwave-bg"></div>
     <div class="slide-content" style="align-items: center; text-align: center;">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
         <div class="pill-badge">
-          <span>09</span> ENGINEERING EXCELLENCE
+          <span>09</span> ARSITEKTUR FRONTEND &amp; TEKNOLOGI
         </div>
-        <h2 class="gradient-title" style="font-size: 2.3rem;">
-          The Architecture Behind AirPro.
+        <h2 class="gradient-title" style="font-size: 2.2rem;">
+          The Architecture Behind AirPro Template
         </h2>
       </div>
 
       <!-- 3 Stack Cards -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; width: 100%; max-width: 900px; margin: 12px 0;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; max-width: 900px; margin: 12px 0;">
         <div class="glass-card" style="text-align: left; padding: 16px 20px;">
-          <h3 style="font-size: 13px; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
-            CORE PLATFORM
+          <h3 style="font-size: 12.5px; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
+            CORE FRONTEND
           </h3>
-          <ul style="font-size: 11px; color: #cbd5e1; list-style: none; line-height: 1.8;">
+          <ul style="font-size: 10.5px; color: #cbd5e1; list-style: none; line-height: 1.8;">
             <li>✦ <strong>React 19:</strong> Fast concurrent rendering</li>
             <li>✦ <strong>Vite 6:</strong> Sub-second HMR module bundler</li>
             <li>✦ <strong>TypeScript:</strong> Type-safe interface contracts</li>
-            <li>✦ <strong>HTML5 Video:</strong> Native hardware decoding</li>
+            <li>✦ <strong>ESM Imports:</strong> Native modern JavaScript</li>
           </ul>
         </div>
 
         <div class="glass-card" style="text-align: left; padding: 16px 20px;">
-          <h3 style="font-size: 13px; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
-            MOTION &amp; 3D
+          <h3 style="font-size: 12.5px; font-weight: 800; color: #34d399; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
+            MOTION &amp; ANIMATION
           </h3>
-          <ul style="font-size: 11px; color: #cbd5e1; list-style: none; line-height: 1.8;">
-            <li>✦ <strong>GSAP Core:</strong> High-performance timeline tween</li>
+          <ul style="font-size: 10.5px; color: #cbd5e1; list-style: none; line-height: 1.8;">
+            <li>✦ <strong>GSAP 3 Core:</strong> High-performance timeline tween</li>
             <li>✦ <strong>ScrollTrigger:</strong> 3000vh scrub choreographer</li>
-            <li>✦ <strong>CSS 3D Matrix:</strong> Hardware-accelerated GPU</li>
-            <li>✦ <strong>RAF Loop:</strong> Flawless 60fps render syncing</li>
+            <li>✦ <strong>@gsap/react:</strong> Safe React lifecycle scoping</li>
+            <li>✦ <strong>CSS 3D Transforms:</strong> Hardware GPU rendering</li>
           </ul>
         </div>
 
         <div class="glass-card" style="text-align: left; padding: 16px 20px;">
-          <h3 style="font-size: 13px; font-weight: 800; color: #c084fc; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
-            DESIGN SYSTEM
+          <h3 style="font-size: 12.5px; font-weight: 800; color: #c084fc; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
+            STYLING &amp; UX
           </h3>
-          <ul style="font-size: 11px; color: #cbd5e1; list-style: none; line-height: 1.8;">
+          <ul style="font-size: 10.5px; color: #cbd5e1; list-style: none; line-height: 1.8;">
             <li>✦ <strong>Tailwind CSS v4:</strong> Modern CSS-first engine</li>
-            <li>✦ <strong>Liquid Glass:</strong> Real-time backdrop blurring</li>
-            <li>✦ <strong>Lucide Icons:</strong> Ultra-clean SVG icon suite</li>
-            <li>✦ <strong>Fluid Typography:</strong> Clamp-based scaling</li>
+            <li>✦ <strong>Liquid Glass Blur:</strong> Backdrop-filter styling</li>
+            <li>✦ <strong>Lucide React:</strong> Clean SVG icon components</li>
+            <li>✦ <strong>Scroll Locking:</strong> Body overflow state control</li>
           </ul>
         </div>
       </div>
 
       <!-- Grand Footer -->
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 10px;">
-        <h1 class="gradient-title" style="font-size: 3.5rem; letter-spacing: 0.05em; line-height: 1;">
-          HEAR THE UNHEARD.
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 8px;">
+        <h1 class="gradient-title" style="font-size: 3rem; letter-spacing: 0.04em; line-height: 1;">
+          REACTJS AIRPRO TEMPLATE
         </h1>
         <div class="pill-badge" style="font-size: 11px; padding: 6px 22px;">
-          WIDI FIRMAAN <span style="opacity: 0.6;">·</span> LEAD ARCHITECT &amp; DEVELOPER
+          WIDI FIRMAAN <span style="opacity: 0.6;">·</span> LEAD FRONTEND DEVELOPER
         </div>
         <p style="font-size: 10px; color: #64748b; margin-top: 4px; font-family: 'JetBrains Mono', monospace;">
-          AirPro Hardware Showcase · 2026 Production Edition · widifirmaan.web.id
+          Interactive Web Showcase · 2026 Production Edition · widifirmaan.web.id
         </p>
       </div>
     </div>
@@ -992,7 +937,6 @@ const pdfContinuousDownloads = path.join(downloadsDir, 'AirPro-Continuous.pdf');
 const pdfContinuousArtifacts = path.join(artifactsDir, 'AirPro-Continuous.pdf');
 
 console.log('📜 Rendering Continuous Single-Scroll Showcase PDF (Poster Mode)...');
-// Inject CSS override to remove page breaks and add card margins for seamless vertical scroll
 await page.addStyleTag({
   content: `
     @page { size: auto; margin: 0; }
@@ -1016,7 +960,7 @@ fs.writeFileSync(pdfContinuousArtifacts, continuousBuffer);
 const contSizeMB = (continuousBuffer.length / (1024 * 1024)).toFixed(2);
 
 console.log(`\n================================================================================`);
-console.log(`🎉 AIRPRO PRESENTATION PDFS SUCCESSFULLY GENERATED!`);
+console.log(`🎉 AIRPRO WEB ARCHITECTURE PDFS SUCCESSFULLY GENERATED!`);
 console.log(`📦 Multi-Page Deck (Slides)   : ${pdfSizeMB} MB (10 Pages A4 Landscape)`);
 console.log(`   -> Saved: ${pdfPathDownloads}`);
 console.log(`📦 Continuous Poster (Scroll) : ${contSizeMB} MB (1 Long Showcase Page)`);
