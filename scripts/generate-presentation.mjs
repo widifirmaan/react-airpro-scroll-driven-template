@@ -11,14 +11,14 @@ const downloadsDir = '/home/widifirmaan/Downloads';
 function encodeImage(filename) {
   const filePath = path.join(screenshotsDir, filename);
   if (!fs.existsSync(filePath)) {
-    console.warn(`Peringatan: Screenshot tidak ditemukan: ${filePath}`);
+    console.warn(`Warning: Screenshot not found: ${filePath}`);
     return '';
   }
   const fileBuffer = fs.readFileSync(filePath);
   return `data:image/png;base64,${fileBuffer.toString('base64')}`;
 }
 
-console.log('Memproses screenshot AirPro...');
+console.log('Encoding AirPro screenshots...');
 
 const images = {
   heroDesktop: encodeImage('Hero Desktop.png'),
@@ -33,10 +33,10 @@ const images = {
   finalDesktop: encodeImage('Final Reveal Desktop.png'),
 };
 
-console.log('Menyusun HTML presentasi dengan style murni AirPro Apple Dark Showcase...');
+console.log('Assembling English AirPro Apple Dark Showcase Presentation Deck HTML...');
 
 const htmlContent = `<!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>AirPro - Web Engineering Presentation</title>
@@ -332,7 +332,7 @@ const htmlContent = `<!DOCTYPE html>
         <div class="brand-title">AirPro Showcase</div>
         <div class="brand-subtitle">Interactive 3D Audio Web Template</div>
       </div>
-      <div class="badge-pill">DECK-PRO-01 / 10</div>
+      <div class="badge-pill">DECK-AIR-01 / 10</div>
     </div>
 
     <div class="slide-content">
@@ -345,10 +345,10 @@ const htmlContent = `<!DOCTYPE html>
             <span class="tech-pill">Tailwind CSS</span>
           </div>
           <h1 style="font-size: 42px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.08; margin-bottom: 16px;">
-            Arsitektur Web Showcase Interaktif Audio Pro
+            Interactive 3D Audio &amp; GSAP Scroll Showcase Architecture
           </h1>
           <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 24px;">
-            Eksplorasi rekayasa frontend modern dengan manipulasi timeline scrubbing 60 FPS, sinkronisasi audio-visual responsif, liquid glass navigation, dan rendering komponen tanpa jeda layout shift.
+            An exploration of modern frontend craftsmanship featuring 60 FPS timeline scrubbing, responsive audio-visual synchronization, floating liquid glass navigation, and zero-layout-shift component rendering.
           </p>
           <div class="glass-card" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 14px 18px;">
             <div>
@@ -357,14 +357,14 @@ const htmlContent = `<!DOCTYPE html>
               <div style="font-size: 11px; color: var(--text-secondary);">GPU Composited</div>
             </div>
             <div>
-              <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">SCRUB VIRTUAL</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">VIRTUAL TRACK</div>
               <div style="font-size: 20px; font-weight: 800; color: #FFFFFF; margin-top: 2px;">3000vh</div>
-              <div style="font-size: 11px; color: var(--text-secondary);">Scroll Trigger Track</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">ScrollTrigger Scrub</div>
             </div>
             <div>
-              <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">ASSET WEIGHT</div>
+              <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">ASSET PIPELINE</div>
               <div style="font-size: 20px; font-weight: 800; color: #FFFFFF; margin-top: 2px;">Zero Lag</div>
-              <div style="font-size: 11px; color: var(--text-secondary);">Optimized Pipeline</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Pre-Cached Assets</div>
             </div>
           </div>
         </div>
@@ -376,80 +376,80 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="slide-footer">
-      <div>AIRPRO WEB ARCHITECTURE SHOWCASE</div>
+      <div>AIRPRO &bull; INTERACTIVE 3D AUDIO SHOWCASE</div>
       <div>WIDI FIRMANSYAH &bull; LEAD FRONTEND ENGINEER</div>
       <div>01 / 10</div>
     </div>
   </div>
 
-  <!-- SLIDE 2: LATAR BELAKANG & TUJUAN REKAYASA -->
+  <!-- SLIDE 2: ARCHITECTURE & TECHNICAL FOUNDATIONS -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Arsitektur &amp; Fondasi</div>
-        <div class="brand-subtitle">Spesifikasi Kebutuhan Teknis</div>
+        <div class="brand-title">Engineering Foundations</div>
+        <div class="brand-subtitle">Timeline Scrubbing Rationale</div>
       </div>
-      <div class="badge-pill">DECK-PRO-02 / 10</div>
+      <div class="badge-pill">DECK-AIR-02 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Fondasi Rekayasa Frontend</div>
-        <h2 class="slide-title">Tantangan Scrubbing Interaktif &amp; Komposisi Timeline</h2>
-        <p class="slide-subtitle">Membangun pengalaman web sinematik setara Apple Keynote dengan performa tinggi tanpa membebani thread rendering browser.</p>
+        <div class="slide-category">Core Frontend Rationale</div>
+        <h2 class="slide-title">Interactive Scrubbing &amp; Timeline Choreography</h2>
+        <p class="slide-subtitle">Engineering a cinematic Apple Keynote-grade experience with zero main-thread jank and seamless cross-device scaling.</p>
       </div>
 
       <div class="layout-grid-3">
         <div class="glass-card">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">01 &bull; KENDALA TEKNIS</div>
-          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">Scroll Jank &amp; Frame Drop</h3>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">01 &bull; TECHNICAL CHALLENGE</div>
+          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">Scroll Jank &amp; Frame Drops</h3>
           <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
-            Animasi scroll web konvensional sering mengalami layout thrashing akibat pembacaan nilai offset DOM secara berulang di main thread saat pengguna menggulir cepat.
+            Conventional scroll listeners trigger layout thrashing and reflows when reading DOM geometry repeatedly on the main thread during high-speed wheel events.
           </p>
         </div>
 
         <div class="glass-card">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">02 &bull; SOLUSI ARSITEKTUR</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">02 &bull; ARCHITECTURAL SOLUTION</div>
           <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">GSAP Timeline Pinning</h3>
           <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
-            Pengikatan track virtual 3000vh melalui GSAP ScrollTrigger dan hook useGSAP, memanfaatkan CSS transform hardware-accelerated tanpa merusak reflow DOM.
+            Pinning a 3000vh virtual track using GSAP ScrollTrigger and the useGSAP hook leverages hardware-accelerated CSS transforms without triggering DOM recalculations.
           </p>
         </div>
 
         <div class="glass-card">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">03 &bull; TARGET OUTPUT</div>
-          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">Konsistensi Responsif</h3>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">03 &bull; RESPONSIVE FIDELITY</div>
+          <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">Dynamic Coordinate Interpolation</h3>
           <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
-            Interpolasi skala dan koordinat X/Y secara dinamis antara desktop dan mobile breakpoint guna mempertahankan fokus narasi visual audio produk secara presisi.
+            Dynamically recalculating scale factors and horizontal travel offsets between desktop and mobile viewports preserves focal narrative precision.
           </p>
         </div>
       </div>
     </div>
 
     <div class="slide-footer">
-      <div>AIRPRO &bull; SPESIFIKASI ARSITEKTUR</div>
-      <div>STANDARISASI WEB SINEMATIK</div>
+      <div>AIRPRO &bull; ARCHITECTURAL FOUNDATIONS</div>
+      <div>CINEMATIC WEB STANDARDS</div>
       <div>02 / 10</div>
     </div>
   </div>
 
-  <!-- SLIDE 3: PRELOADER & HERO KINETIC -->
+  <!-- SLIDE 3: PRELOADER & KINETIC HERO -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Komponen Web</div>
+        <div class="brand-title">Component Lifecycle</div>
         <div class="brand-subtitle">Kinetic Preloader &amp; Hero Transition</div>
       </div>
-      <div class="badge-pill">DECK-PRO-03 / 10</div>
+      <div class="badge-pill">DECK-AIR-03 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Manajemen Siklus Hidup &amp; Preloading</div>
-        <h2 class="slide-title">Transisi State Preloader Menuju Panggung Interaktif</h2>
-        <p class="slide-subtitle">Siklus load DOM terisolasi yang memastikan aset grafis telah tersimpan di cache sebelum timeline scroll diaktifkan.</p>
+        <div class="slide-category">Lifecycle &amp; Asset Preloading</div>
+        <h2 class="slide-title">Preloader State Machine &amp; Stage Entry Transition</h2>
+        <p class="slide-subtitle">Isolated DOM readiness cycle ensuring graphic textures are fully cached before the scroll timeline unlocks.</p>
       </div>
 
       <div class="layout-split">
@@ -459,21 +459,21 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="feature-list">
           <div class="feature-item">
-            <div class="feature-item-title">Deteksi Status Ready Document</div>
+            <div class="feature-item-title">Document Ready State Detection</div>
             <div class="feature-item-desc">
-              Pengecekan document.readyState complete yang memicu timer fade-out CSS scale-110 dan blur, mencegah tampilan antarmuka yang belum selesai ter-render.
+              Monitoring document.readyState complete before triggering an animated scale-110 and blur fade-out, eliminating partial element pops.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Initial State Transform Setup</div>
+            <div class="feature-item-title">Initial State Transform Matrix</div>
             <div class="feature-item-desc">
-              Inisialisasi posisi earbud kiri dan kanan dengan properti x offset dinamis berbasis viewport width sebelum scrubber ScrollTrigger menerima input gulir.
+              Initializes left and right earbud elements with dynamic offset coordinates based on window width prior to any scroll user interaction.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Lock Scrolling Body Saat Transisi</div>
+            <div class="feature-item-title">Body Scroll Lock During Transition</div>
             <div class="feature-item-desc">
-              Pencegahan scroll glitch sebelum animasi inisial selesai dengan manipulasi overflow-x hidden dan cleanup listener window load yang aman.
+              Prevents scroll glitches during preloader teardown by locking overflow-x and cleaning up window listeners deterministically.
             </div>
           </div>
         </div>
@@ -481,7 +481,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="slide-footer">
-      <div>AIRPRO &bull; MODUL PRELOADER</div>
+      <div>AIRPRO &bull; PRELOADER MODULE</div>
       <div>LIFECYCLE MANAGEMENT</div>
       <div>03 / 10</div>
     </div>
@@ -492,17 +492,17 @@ const htmlContent = `<!DOCTYPE html>
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Inti Interaktivitas</div>
+        <div class="brand-title">Interactive Core</div>
         <div class="brand-subtitle">GSAP ScrollTrigger Scrubbing Engine</div>
       </div>
-      <div class="badge-pill">DECK-PRO-04 / 10</div>
+      <div class="badge-pill">DECK-AIR-04 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Mesin Animasi Web</div>
-        <h2 class="slide-title">Koreografi Scrubbing Virtual Track 3000vh</h2>
-        <p class="slide-subtitle">Transformasi elemen AirPods dari posisi split stereo menuju penyatuan fisik secara bertahap mengikuti guliran scroll pengguna.</p>
+        <div class="slide-category">Interactive Animation Engine</div>
+        <h2 class="slide-title">3000vh Virtual Track Scrubbing Choreography</h2>
+        <p class="slide-subtitle">Transforming stereo earbud elements from split perspective into unified physical hardware along the user's scroll path.</p>
       </div>
 
       <div class="layout-split-reversed">
@@ -510,19 +510,19 @@ const htmlContent = `<!DOCTYPE html>
           <div class="feature-item">
             <div class="feature-item-title">Scrub Smoother Parameter 2s</div>
             <div class="feature-item-desc">
-              Pengaturan scrub: 2 pada timeline GSAP meredam akselerasi roda gulir mendadak sehingga gerak visual terasa elastis, stabil, dan sinematik.
+              A 2-second scrub damping value on the GSAP timeline absorbs abrupt wheel events, rendering silky elastic motions.
             </div>
           </div>
           <div class="feature-item">
             <div class="feature-item-title">Breakpoint Dynamic Coordinate Clamping</div>
             <div class="feature-item-desc">
-              Pemisahan koordinat X (30% pada perangkat seluler vs 100% pada layar desktop lebar) untuk menjaga objek 3D tidak keluar dari batas viewport.
+              Adjusts horizontal split travel (30% on mobile screens vs 100% on ultrawide monitors) to prevent elements from breaching the viewport.
             </div>
           </div>
           <div class="feature-item">
             <div class="feature-item-title">Sub-Pixel Rotation &amp; Scale Interpolation</div>
             <div class="feature-item-desc">
-              Rotasi sudut dari -15 derajat ke 0 derajat dengan skala adaptif 0.5x hingga 1.0x untuk memberikan kedalaman dimensi ruang 3D nyata.
+              Rotates angles smoothly from -15deg to 0deg with adaptive scaling (0.5x to 1.0x), imparting convincing physical 3D depth.
             </div>
           </div>
         </div>
@@ -540,22 +540,22 @@ const htmlContent = `<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 5: NOISE CANCELLATION VISUALIZER -->
+  <!-- SLIDE 5: ACTIVE NOISE CANCELLATION VISUALIZER -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Fitur Web Audio</div>
-        <div class="brand-subtitle">Active Noise Cancellation Simulation</div>
+        <div class="brand-title">Audio Simulation</div>
+        <div class="brand-subtitle">Active Noise Cancellation Visualizer</div>
       </div>
-      <div class="badge-pill">DECK-PRO-05 / 10</div>
+      <div class="badge-pill">DECK-AIR-05 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Simulasi Akustik Web</div>
-        <h2 class="slide-title">Visualisasi Gelombang Peredam Kebisingan Aktif</h2>
-        <p class="slide-subtitle">Penyajian infografis interaktif terkait mekanisme mikrofon peredam dan inversi gelombang anti-noise secara real-time.</p>
+        <div class="slide-category">Acoustic Simulation</div>
+        <h2 class="slide-title">Active Noise Cancellation Waveform Visualizer</h2>
+        <p class="slide-subtitle">Interactive infographic demonstrating inward and outward microphone arrays calculating anti-noise wave inversion in real time.</p>
       </div>
 
       <div class="layout-split">
@@ -565,21 +565,21 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="feature-list">
           <div class="feature-item">
-            <div class="feature-item-title">Inward &amp; Outward Mic Tracking</div>
+            <div class="feature-item-title">Inward &amp; Outward Microphone Tracking</div>
             <div class="feature-item-desc">
-              Diagram visual penangkapan noise eksternal dan kalkulasi frekuensi suara balik hingga 48.000 kali per detik melalui komputasi audio.
+              Visualizes environmental noise detection and high-speed anti-noise wave calculations up to 48,000 times per second.
             </div>
           </div>
           <div class="feature-item">
             <div class="feature-item-title">Liquid Waveform Rendering</div>
             <div class="feature-item-desc">
-              Animasi gelombang frekuensi audio yang di-render dengan efisiensi CSS transform dan opacity blending tanpa membebani GPU.
+              Acoustic frequency waves animated purely with CSS hardware-composited transforms, avoiding canvas overhead on low-power devices.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Konteks Informasi Berlapis</div>
+            <div class="feature-item-title">Synchronized Narrative Card Transitions</div>
             <div class="feature-item-desc">
-              Transisi teks narasi teknis yang masuk bersamaan saat objek earbud berotasi mengarah ke posisi mikrofon akustik.
+              Textual descriptions enter in synchronization as the earbud rotates to face acoustic port grilles along the scroll timeline.
             </div>
           </div>
         </div>
@@ -593,42 +593,42 @@ const htmlContent = `<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 6: SPATIAL AUDIO & H2 CHIPSET -->
+  <!-- SLIDE 6: SPATIAL AUDIO & H2 SILICON CHIPSET -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Arsitektur Komponen</div>
-        <div class="brand-subtitle">Spatial Audio &amp; Chipset H2 Deep Dive</div>
+        <div class="brand-title">Silicon Deep Dive</div>
+        <div class="brand-subtitle">Spatial Audio &amp; Apple H2 Chipset</div>
       </div>
-      <div class="badge-pill">DECK-PRO-06 / 10</div>
+      <div class="badge-pill">DECK-AIR-06 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Eksplorasi Perangkat Keras</div>
-        <h2 class="slide-title">Bedah Komponen Silikon &amp; Spatial Tracking</h2>
-        <p class="slide-subtitle">Visualisasi layer komponen internal chipset H2 dengan kartu kaca semi-transparan dan penataan tipografi teknis presisi.</p>
+        <div class="slide-category">Hardware Exploration</div>
+        <h2 class="slide-title">Silicon Chipset Architecture &amp; Spatial Tracking</h2>
+        <p class="slide-subtitle">Dissecting the Apple H2 silicon processing pipeline using translucent frosted glass cards and precise typographic layouts.</p>
       </div>
 
       <div class="layout-split-reversed">
         <div class="feature-list">
           <div class="feature-item">
-            <div class="feature-item-title">Modul Hardware Simulation</div>
+            <div class="feature-item-title">Silicon Hardware Simulation Layer</div>
             <div class="feature-item-desc">
-              Representasi arsitektur silikon pemrosesan sinyal digital yang mengatur peredaman derau dan spatial audio multi-channel.
+              Exploded visual representation of digital signal processing cores managing adaptive equalization and multi-channel spatial audio.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Dynamic Head Tracking UI</div>
+            <div class="feature-item-title">Dynamic Head-Tracking UI Model</div>
             <div class="feature-item-desc">
-              Visualisasi sumbu orientasi kepala pengguna dengan sensor giroskopik yang disajikan lewat elemen kartu glassmorphism modern.
+              Visualizes gyroscopic and accelerometer sensors adjusting acoustic soundstage orientation dynamically in virtual 3D space.
             </div>
           </div>
           <div class="feature-item">
             <div class="feature-item-title">High Dynamic Range Amplifier Card</div>
             <div class="feature-item-desc">
-              Spesifikasi driver kustom distorsi rendah yang dipadukan dengan tipografi JetBrains Mono untuk metrik akustik spesifik.
+              Custom low-distortion driver specifications highlighted with JetBrains Mono monospace callouts for clear technical benchmarks.
             </div>
           </div>
         </div>
@@ -651,17 +651,17 @@ const htmlContent = `<!DOCTYPE html>
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Sistem Navigasi</div>
-        <div class="brand-subtitle">Floating Liquid Glass Pill &amp; Mobile Overlay</div>
+        <div class="brand-title">Interface Design</div>
+        <div class="brand-subtitle">Floating Liquid Glass Pill &amp; Mobile Drawer</div>
       </div>
-      <div class="badge-pill">DECK-PRO-07 / 10</div>
+      <div class="badge-pill">DECK-AIR-07 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Desain Antarmuka Modern</div>
-        <h2 class="slide-title">Navigasi Mengambang dengan Efek Liquid Glass</h2>
-        <p class="slide-subtitle">Komponen navigasi responsif yang memanfaatkan filter blur multi-layer dan transisi state tanpa jeda tata letak.</p>
+        <div class="slide-category">Modern Interface Systems</div>
+        <h2 class="slide-title">Floating Navigation Pill with Liquid Glass Effects</h2>
+        <p class="slide-subtitle">A responsive floating header bar utilizing multi-layer backdrop blur and stateful drawer animations without layout shifts.</p>
       </div>
 
       <div class="layout-split">
@@ -671,21 +671,21 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="feature-list">
           <div class="feature-item">
-            <div class="feature-item-title">Floating Centered Pill Layout</div>
+            <div class="feature-item-title">Floating Centered Pill Architecture</div>
             <div class="feature-item-desc">
-              Posisi tetap top-4 dengan left-1/2 -translate-x-1/2 pada desktop yang menciptakan ilusi bilah kendali melayang di atas panggung audio.
+              Fixed top-4 positioning with left-1/2 -translate-x-1/2 creates the illusion of a hardware remote floating over the stage canvas.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Backdrop-Filter Blur 24px</div>
+            <div class="feature-item-title">24px Multi-Layer Backdrop Filter Blur</div>
             <div class="feature-item-desc">
-              Difusi cahaya latar belakang dengan latar putih transparan 5% dan batas 10% untuk menjaga keterbacaan teks saat animasi lewat di bawahnya.
+              Diffuse light transmission through a 5% translucent white background preserves typography legibility as animations scroll beneath.
             </div>
           </div>
           <div class="feature-item">
             <div class="feature-item-title">Zero-Layout-Shift Mobile Drawer</div>
             <div class="feature-item-desc">
-              Overlay menu seluler dengan penguncian scroll body dinamis via hook useEffect guna menjamin kenyamanan navigasi satu tangan.
+              Mobile hamburger overlay with dynamic body scroll locking managed via useEffect ensures comfortable single-handed navigation.
             </div>
           </div>
         </div>
@@ -699,22 +699,22 @@ const htmlContent = `<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 8: SPESIFIKASI TEKNIS & GRID BENCHMARK -->
+  <!-- SLIDE 8: DATA BENCHMARK & TECH MATRIX -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Matriks Data</div>
-        <div class="brand-subtitle">Spesifikasi Komprehensif &amp; Tolok Ukur</div>
+        <div class="brand-title">Data Matrix</div>
+        <div class="brand-subtitle">Comprehensive Technical Specifications</div>
       </div>
-      <div class="badge-pill">DECK-PRO-08 / 10</div>
+      <div class="badge-pill">DECK-AIR-08 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Matriks Data Performa</div>
-        <h2 class="slide-title">Grid Spesifikasi Teknis &amp; Efisiensi Daya</h2>
-        <p class="slide-subtitle">Struktur penyajian parameter teknis menggunakan grid kartu terisolasi dengan kontras rasio tinggi untuk keterbacaan optimal.</p>
+        <div class="slide-category">Performance Parameters</div>
+        <h2 class="slide-title">Technical Specification Grid &amp; Battery Benchmarks</h2>
+        <p class="slide-subtitle">Structured presentation of driver parameters, battery stamina, sensor arrays, and ingress protection ratings.</p>
       </div>
 
       <div class="layout-split-reversed">
@@ -724,21 +724,21 @@ const htmlContent = `<!DOCTYPE html>
 
         <div class="feature-list">
           <div class="feature-item">
-            <div class="feature-item-title">Daya Tahan Baterai &amp; Case Pengisian</div>
+            <div class="feature-item-title">Battery Stamina &amp; MagSafe Charging Case</div>
             <div class="feature-item-desc">
-              Informasi durasi pemutaran hingga 6 jam per pengisian tunggal dan 30 jam bersama wadah pengisi daya MagSafe ditampilkan secara ringkas.
+              Provides up to 6 hours of continuous listening per charge and 30 total hours with the MagSafe case, detailed in concise metric cards.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Sensor Sentuh Kapasitif &amp; Swipe Volume</div>
+            <div class="feature-item-title">Capacitive Touch Controls &amp; Swipe Volume</div>
             <div class="feature-item-desc">
-              Dokumentasi kendali gestur cubit dan usap untuk penyesuaian volume audio instan tanpa perlu menjangkau perangkat induk.
+              Documents touch stem gesture mechanics for pinch and swipe volume adjustments without reaching for the paired device.
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-item-title">Sertifikasi Ketahanan Air IPX4</div>
+            <div class="feature-item-title">IPX4 Sweat and Water Resistance</div>
             <div class="feature-item-desc">
-              Perlindungan terhadap keringat dan percikan air untuk penggunaan olahraga berat di luar ruangan maupun dalam studio.
+              Certified moisture resistance for intense outdoor workouts and studio listening sessions, reinforced with clean badge styling.
             </div>
           </div>
         </div>
@@ -752,30 +752,30 @@ const htmlContent = `<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 9: OPTIMASI PERFORMA & WEB VITALS -->
+  <!-- SLIDE 9: WEB PERFORMANCE & CORE WEB VITALS -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Rekayasa Kinerja</div>
-        <div class="brand-subtitle">Optimasi Rendering &amp; Core Web Vitals</div>
+        <div class="brand-title">Performance Engineering</div>
+        <div class="brand-subtitle">Rendering Optimization &amp; Core Web Vitals</div>
       </div>
-      <div class="badge-pill">DECK-PRO-09 / 10</div>
+      <div class="badge-pill">DECK-AIR-09 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Kinerja &amp; Keandalan Sistem</div>
-        <h2 class="slide-title">Arsitektur Performa Tinggi Tanpa Penurunan Frame</h2>
-        <p class="slide-subtitle">Penerapan strategi pemuatan sumber daya dan isolasi lapisan render GPU untuk mempertahankan latensi ultra-rendah.</p>
+        <div class="slide-category">Speed &amp; Reliability</div>
+        <h2 class="slide-title">High-Velocity Compositing &amp; Zero Frame Drops</h2>
+        <p class="slide-subtitle">Resource pre-caching and GPU compositor isolation maintain ultra-low latency during rapid user scrolling.</p>
       </div>
 
       <div class="layout-grid-3">
         <div class="glass-card">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">STRATEGI MEMORI</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">MEMORY DISCIPLINE</div>
           <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">useGSAP Hook Scoping</h3>
           <p style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
-            Penggunaan scope ref pada hook useGSAP memastikan seluruh ScrollTrigger instance, tween, dan event listener dibersihkan secara otomatis saat komponen unmount untuk menghindari memory leak.
+            Scope references in useGSAP ensure all ScrollTrigger instances, tweens, and event listeners clean up automatically upon unmount to eliminate memory leaks.
           </p>
         </div>
 
@@ -783,7 +783,7 @@ const htmlContent = `<!DOCTYPE html>
           <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">GPU COMPOSITING</div>
           <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Transform &amp; Opacity Only</h3>
           <p style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
-            Seluruh transisi timeline murni menggerakkan translate3d, scale, dan opacity. Tidak ada properti yang memicu layout recalculation (seperti width, height, atau top/left) selama siklus gulir aktif.
+            Timeline animations manipulate only translate3d, scale, and opacity. No properties trigger expensive browser layout recalculations during active scrolling.
           </p>
         </div>
 
@@ -791,7 +791,7 @@ const htmlContent = `<!DOCTYPE html>
           <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">CORE WEB VITALS</div>
           <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Zero CLS &amp; Low INP</h3>
           <p style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;">
-            Cumulative Layout Shift bernilai 0.00 berkat container pinning berukuran absolut dan reserved space pada gambar, menghasilkan skor responsivitas Interaction to Next Paint di bawah 50ms.
+            Cumulative Layout Shift scores a perfect 0.00 thanks to absolute container pinning and reserved asset bounding boxes, achieving sub-50ms INP.
           </p>
         </div>
       </div>
@@ -804,47 +804,47 @@ const htmlContent = `<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SLIDE 10: KESIMPULAN & DEPLOYMENT PIPELINE -->
+  <!-- SLIDE 10: ARCHITECTURAL SUMMARY & DEPLOYMENT -->
   <div class="slide">
     <div class="slide-header">
       <div class="brand-pill">
         <div class="brand-dot"></div>
-        <div class="brand-title">Ringkasan Proyek</div>
-        <div class="brand-subtitle">Ekosistem Produksi &amp; Deployment</div>
+        <div class="brand-title">Milestone Summary</div>
+        <div class="brand-subtitle">Production Specifications &amp; Quality Audit</div>
       </div>
-      <div class="badge-pill">DECK-PRO-10 / 10</div>
+      <div class="badge-pill">DECK-AIR-10 / 10</div>
     </div>
 
     <div class="slide-content">
       <div class="title-block">
-        <div class="slide-category">Produksi &amp; Rangkuman</div>
-        <h2 class="slide-title">Kesimpulan Implementasi &amp; Pipeline Siap Rilis</h2>
-        <p class="slide-subtitle">Rangkuman capaian rekayasa frontend AirPro dan kesiapan integrasi ke dalam sistem produksi berstandar enterprise.</p>
+        <div class="slide-category">Production Readiness</div>
+        <h2 class="slide-title">Comprehensive Project Implementation Summary</h2>
+        <p class="slide-subtitle">A showcase web experience proving how precision timeline scrubbing and liquid glass UI elevate modern product presentation.</p>
       </div>
 
       <div class="layout-grid-4">
         <div class="glass-card">
           <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">BUNDLER</div>
           <div style="font-size: 18px; font-weight: 800; color: #FFFFFF; margin-top: 4px; margin-bottom: 4px;">Vite 6</div>
-          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Kompilasi TypeScript cepat dengan Rollup code splitting teroptimasi.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Rapid TypeScript compilation with Rollup code-splitting.</p>
         </div>
 
         <div class="glass-card">
           <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">ANIMATION</div>
           <div style="font-size: 18px; font-weight: 800; color: #FFFFFF; margin-top: 4px; margin-bottom: 4px;">GSAP 3</div>
-          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Scrubbing ScrollTrigger terkalibrasi dengan timeline terpadu.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Calibrated ScrollTrigger scrubbing with unified timeline.</p>
         </div>
 
         <div class="glass-card">
           <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">STYLING</div>
           <div style="font-size: 18px; font-weight: 800; color: #FFFFFF; margin-top: 4px; margin-bottom: 4px;">Tailwind v4</div>
-          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Desain token Liquid Glass terintegrasi dan konsisten.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Integrated liquid glass tokens with 24px rounded cards.</p>
         </div>
 
         <div class="glass-card">
           <div style="font-size: 11px; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">QUALITY</div>
           <div style="font-size: 18px; font-weight: 800; color: #FFFFFF; margin-top: 4px; margin-bottom: 4px;">100% Pass</div>
-          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Verifikasi lintas viewport desktop dan seluler teruji.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Fully verified across desktop monitors and mobile touchscreens.</p>
         </div>
       </div>
 
@@ -854,7 +854,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="slide-footer">
-      <div>AIRPRO &bull; KESIMPULAN REKAYASA WEB</div>
+      <div>AIRPRO &bull; WEB ARCHITECTURE SHOWCASE</div>
       <div>WIDI FIRMANSYAH &bull; LEAD ENGINEER</div>
       <div>10 / 10</div>
     </div>
@@ -866,9 +866,9 @@ const htmlContent = `<!DOCTYPE html>
 
 const htmlFilePath = path.join(projectRoot, 'presentation.html');
 fs.writeFileSync(htmlFilePath, htmlContent, 'utf-8');
-console.log(`HTML presentasi disimpan di: ${htmlFilePath}`);
+console.log(`Presentation HTML written to: ${htmlFilePath}`);
 
-console.log('Menjalankan Playwright Chromium untuk render PDF AirPro Apple Dark Showcase...');
+console.log('Launching Chromium with Playwright to render English AirPro Apple Dark Showcase PDFs...');
 
 async function renderPDF() {
   const playwrightPath = '/home/widifirmaan/Projects/qa-toolkit/node_modules/playwright/index.mjs';
@@ -932,12 +932,12 @@ async function renderPDF() {
   const slideStat = fs.statSync(slidePdfPath);
   const contStat = fs.statSync(continuousPdfPath);
 
-  console.log('\nPDF AirPro Apple Dark Showcase berhasil dibuat:');
+  console.log('\nAirPro English PDFs successfully generated:');
   console.log(`- Multi-Page Deck: ${(slideStat.size / 1024 / 1024).toFixed(2)} MB (${slidePdfPath})`);
   console.log(`- Continuous Poster: ${(contStat.size / 1024 / 1024).toFixed(2)} MB (${continuousPdfPath})\n`);
 }
 
 renderPDF().catch((err) => {
-  console.error('Error saat render PDF:', err);
+  console.error('Error rendering PDF:', err);
   process.exit(1);
 });
